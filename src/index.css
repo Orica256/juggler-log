@@ -46,8 +46,39 @@ input[type='date'] {
   -webkit-appearance: none;
   appearance: none;
   display: block;
+  width: 100%;
   min-width: 0;
   max-width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/*
+ * 外観のリセットだけでは足りない。iOSは日付の値と各桁を描く内部要素に
+ * 独自の余白と最小幅を持っており、これが枠を押し広げる。
+ */
+input[type='date']::-webkit-date-and-time-value {
+  text-align: left;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+}
+
+input[type='date']::-webkit-datetime-edit {
+  padding: 0;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+input[type='date']::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+}
+
+/* カレンダーのアイコンは右端に寄せ、値の幅を押し出さないようにする */
+input[type='date']::-webkit-calendar-picker-indicator {
+  margin: 0 0 0 auto;
+  padding: 0;
 }
 
 /*
