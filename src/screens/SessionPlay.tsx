@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
+import { CountGuide } from '../components/CountGuide'
 import { CountPad } from '../components/CountPad'
 import { RealtimeStats } from '../components/RealtimeStats'
 import { Button, Card, Field, NumberInput, ScreenHeader } from '../components/ui'
@@ -41,6 +42,8 @@ export function SessionPlay({
    * 自分のG数が0に潰れてしまうため、確定するまでは画面内に留める。
    */
   const [draftGames, setDraftGames] = useState<string | null>(null)
+  /** 押し分けの早見表。ホールで迷ったときに画面を離れずに開ける */
+  const [guideOpen, setGuideOpen] = useState(false)
 
   // 経過時間を1分ごとに更新する
   useEffect(() => {
@@ -112,10 +115,12 @@ export function SessionPlay({
           <div className="flex shrink-0 gap-3">
             <button
               type="button"
-              onClick={() => navigate('/help')}
-              className="text-sm text-[var(--color-muted)]"
+              onClick={() => setGuideOpen((v) => !v)}
+              className={`text-sm ${
+                guideOpen ? 'text-[var(--color-accent)]' : 'text-[var(--color-muted)]'
+              }`}
             >
-              使い方
+              早見表
             </button>
             <button
               type="button"
@@ -127,6 +132,29 @@ export function SessionPlay({
           </div>
         }
       />
+
+      {guideOpen && (
+        <Card className="mb-4">
+          <div className="mb-3 flex items-baseline justify-between gap-2">
+            <h2 className="text-base font-bold">こういうときは、これを押す</h2>
+            <button
+              type="button"
+              onClick={() => setGuideOpen(false)}
+              className="shrink-0 text-xs text-[var(--color-muted)]"
+            >
+              閉じる
+            </button>
+          </div>
+          <CountGuide />
+          <button
+            type="button"
+            onClick={() => navigate('/help')}
+            className="mt-4 text-xs text-[var(--color-accent)]"
+          >
+            もっと詳しい説明を見る ›
+          </button>
+        </Card>
+      )}
 
       {notice && (
         <p className="mb-3 rounded-lg border border-[var(--color-minus)] px-3 py-2 text-xs text-[var(--color-minus)]">

@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
-import { ScreenHeader } from '../components/ui'
+import { CountGuide } from '../components/CountGuide'
+import { Card, ScreenHeader } from '../components/ui'
 
 /**
  * 使い方の説明。
@@ -54,6 +55,15 @@ export function Help({ navigate }: { navigate: (to: string, replace?: boolean) =
         まずは収支の記録から始めるのがおすすめです。
       </p>
 
+      <Card className="mb-6">
+        <h2 className="mb-3 text-base font-bold">こういうときは、これを押す</h2>
+        <CountGuide />
+      </Card>
+
+      <p className="mb-2 text-xs text-[var(--color-muted)]">
+        ここから下は、必要なときに開いてください。
+      </p>
+
       <Section title="ジャグラーの用語">
         <Terms
           items={[
@@ -71,15 +81,19 @@ export function Help({ navigate }: { navigate: (to: string, replace?: boolean) =
             },
             {
               term: 'ぶどう',
-              body: 'いちばん頻繁に揃う小役。約6回転に1回揃います。設定が高いほどわずかに出やすくなるため、設定推測の材料になります。',
+              body: '揃うとメダルが8枚出ます。約6回転に1回と、いちばん頻繁に揃う役です。設定が高いほどわずかに出やすくなるため、設定推測の材料になります。',
+            },
+            {
+              term: 'チェリー',
+              body: '左のリールに出て、メダルが2枚出ます(ハッピーVⅢとミスターは4枚)。それ自体は数えませんが、ボーナスと同時に出たかどうかが判断材料になります。',
             },
             {
               term: '単独REG(たんどくレグ)',
-              body: 'チェリーと同時ではなく、単独で当たったREGのこと。ぶどうより設定差が大きく、判別の材料として優秀です。',
+              body: 'チェリーが出ていないゲームで当たったREGのこと。ぶどうより設定による差が大きく、判別の材料として優秀です。',
             },
             {
               term: 'ペカ',
-              body: '告知ランプ(GOGO!ランプ)が光ること。光ったらボーナス確定です。',
+              body: '告知ランプ(GOGO!ランプ)が光ること。光ったらボーナス確定です。レバーを叩いた瞬間に光ることも、リールが止まってから光ることもあります。',
             },
             {
               term: '差枚(さまい)',
@@ -125,39 +139,12 @@ export function Help({ navigate }: { navigate: (to: string, replace?: boolean) =
       </Section>
 
       <Section title="打っている間(実戦中)">
-        <p>いちばん使う画面です。画面の下に固定されたボタンで数えていきます。</p>
+        <p>
+          どのボタンを押すかは、この画面のいちばん上にある早見表を見てください。
+          ここでは、ボタン以外の入力欄について説明します。
+        </p>
 
-        <h3 className="mt-4 font-semibold">下のボタン</h3>
-        <div className="mt-2">
-          <Terms
-            items={[
-              {
-                term: 'ぶどう ＋1(いちばん大きいボタン)',
-                body: 'ぶどうが揃うたびに押します。押した回数がボタンの右に出るので、画面を見なくても増えたか確認できます。',
-              },
-              { term: 'BB', body: 'BIGボーナスを引いたときに1回押します。' },
-              {
-                term: '単独REG',
-                body: 'REGを引いたとき、チェリーと同時ではなかった場合に押します。',
-              },
-              {
-                term: 'チェリーREG',
-                body: 'REGを引いたとき、チェリーと同時だった場合に押します。',
-              },
-              {
-                term: '不明REG',
-                body: 'REGを引いたが、単独かチェリーか分からなかったときに押します。適当にどちらかを押してはいけません。',
-              },
-              {
-                term: '取り消し(右上)',
-                body: '直前に押したものを1回ぶん取り消します。何を取り消すかは左に表示されます。',
-              },
-            ]}
-          />
-        </div>
-
-        <h3 className="mt-4 font-semibold">上の入力欄</h3>
-        <div className="mt-2">
+        <div className="mt-3">
           <Terms
             items={[
               {
@@ -168,11 +155,19 @@ export function Help({ navigate }: { navigate: (to: string, replace?: boolean) =
                 term: '投資',
                 body: '1000円追加するたびに「＋1,000円」を押します。押しすぎたら「−1,000」で戻せます。',
               },
+              {
+                term: '取り消し(下の帯の右上)',
+                body: '直前に押したものを1回ぶん取り消します。何を取り消すかは左に表示されます。',
+              },
+              {
+                term: 'カウントの修正',
+                body: '押し間違いに後から気づいたときに、数字を直接直せます。画面を下にたどると出てきます。',
+              },
             ]}
           />
         </div>
         <p className="mt-3 text-[var(--color-muted)]">
-          押し間違いに後から気づいたときは、下のほうにある「カウントの修正」で数字を直接直せます。
+          実戦中の画面の右上にある「早見表」からも、押し分けの一覧をいつでも開けます。
         </p>
       </Section>
 
@@ -196,8 +191,9 @@ export function Help({ navigate }: { navigate: (to: string, replace?: boolean) =
 
         <h3 className="mt-4 font-semibold">単独REGを見分けるには</h3>
         <p className="mt-1 text-[var(--color-muted)]">
-          左のリールにチェリーを狙って打つ必要があります。チェリーが出ていないのにREGが当たっていれば
-          「単独REG」、チェリーと同時なら「チェリーREG」です。
+          毎ゲーム、左リールに「チェリーが付いたBAR」を狙って打ちます。こうしないとチェリーを
+          取りこぼし、そもそも判断できなくなります。ランプが光ったゲームでチェリーが出ていれば
+          「チェリーREG」、出ていなければ「単独REG」です。
         </p>
         <Caution>
           ランプが光ってからチェリーを狙わずに揃えてしまうと、どちらだったか分からなくなります。

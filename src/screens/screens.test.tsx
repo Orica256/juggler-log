@@ -184,6 +184,17 @@ describe('実戦中', () => {
     expect((undo as HTMLButtonElement).disabled).toBe(true)
   })
 
+  it('画面を離れずに早見表を開ける', async () => {
+    const id = await playingSession()
+    render(<SessionPlay id={id} navigate={navigate} />)
+
+    fireEvent.click(await screen.findByRole('button', { name: '早見表' }))
+
+    await waitFor(() => expect(screen.getByText('メダルが8枚出た')).toBeDefined())
+    // カウント中に画面遷移させない
+    expect(navigate).not.toHaveBeenCalled()
+  })
+
   it('機種ごとに推奨する指標が変わる', async () => {
     const id = await playingSession('gogo-juggler-3')
     render(<SessionPlay id={id} navigate={navigate} />)
@@ -425,7 +436,26 @@ describe('設定推測', () => {
 })
 
 describe('使い方', () => {
-  it('初心者が迷いやすい項目の説明を載せている', async () => {
+  it('最初に「どの場合にどのボタンを押すか」を畳まずに出す', async () => {
+    render(<Help navigate={navigate} />)
+
+    // 用語の一覧より先に、押し分けの早見表が見えていること
+    expect(await screen.findByText('こういうときは、これを押す')).toBeDefined()
+    expect(screen.getByText('メダルが8枚出た')).toBeDefined()
+    expect(screen.getByText('7が揃った(BIG)')).toBeDefined()
+  })
+
+  it('ぶどうを目で見て判別する手がかりを示す', async () => {
+    render(<Help navigate={navigate} />)
+    expect(await screen.findByText(/ぶどうが揃っています。いちばん多い役で/)).toBeDefined()
+  })
+
+  it('打ち方そのものを説明している', async () => {
+    render(<Help navigate={navigate} />)
+    expect(await screen.findByText(/左のリールに「チェリーが付いたBAR」を狙って止める/)).toBeDefined()
+  })
+
+  it('用語や数字の読み方は畳んだ状態で用意する', async () => {
     render(<Help navigate={navigate} />)
 
     expect(await screen.findByText('ジャグラーの用語')).toBeDefined()
