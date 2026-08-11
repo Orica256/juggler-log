@@ -31,7 +31,19 @@ export function History({ navigate }: { navigate: (to: string, replace?: boolean
 
   return (
     <div className="pb-8">
-      <ScreenHeader title="履歴" onBack={() => navigate('/', true)} />
+      <ScreenHeader
+        title="履歴"
+        onBack={() => navigate('/', true)}
+        right={
+          <button
+            type="button"
+            onClick={() => navigate('/stats')}
+            className="shrink-0 text-sm text-[var(--color-muted)]"
+          >
+            統計
+          </button>
+        }
+      />
 
       <Card>
         <h2 className="text-xs text-[var(--color-muted)]">累計収支({finished.length}台)</h2>

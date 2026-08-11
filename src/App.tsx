@@ -7,6 +7,7 @@ import { SessionDetail } from './screens/SessionDetail'
 import { SessionEnd } from './screens/SessionEnd'
 import { SessionPlay } from './screens/SessionPlay'
 import { SessionStart } from './screens/SessionStart'
+import { Stats } from './screens/Stats'
 import { Settings } from './screens/Settings'
 
 export default function App() {
@@ -47,6 +48,8 @@ export default function App() {
         return <History navigate={navigate} />
       case 'help':
         return <Help navigate={navigate} />
+      case 'stats':
+        return <Stats navigate={navigate} />
       case 'settings':
         return <Settings navigate={navigate} />
       default:

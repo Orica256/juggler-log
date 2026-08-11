@@ -28,6 +28,13 @@ export function Home({ navigate }: { navigate: (to: string) => void }) {
         <div className="flex shrink-0 gap-3">
           <button
             type="button"
+            onClick={() => navigate('/stats')}
+            className="text-sm text-[var(--color-muted)]"
+          >
+            統計
+          </button>
+          <button
+            type="button"
             onClick={() => navigate('/help')}
             className="text-sm text-[var(--color-muted)]"
           >

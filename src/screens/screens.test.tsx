@@ -19,6 +19,7 @@ import { SessionDetail } from './SessionDetail'
 import { SessionEnd } from './SessionEnd'
 import { SessionPlay } from './SessionPlay'
 import { SessionStart } from './SessionStart'
+import { Stats } from './Stats'
 import { Settings } from './Settings'
 import { today } from '../lib/format'
 
@@ -266,6 +267,98 @@ describe('履歴と詳細', () => {
 
     expect(await screen.findByText('+10,000円')).toBeDefined()
     expect(screen.getByText(/投資 20,000円 \/ 回収 30,000円/)).toBeDefined()
+  })
+})
+
+describe('統計', () => {
+  /** 収支が profit 円になる確定済みの記録を作る */
+  async function finished(patch: {
+    profit: number
+    date?: string
+    hall?: string
+    machineTypeId?: string
+  }) {
+    const invest = 20000
+    const session = await startSession()
+    await updateSession(session.id, {
+      date: patch.date ?? today(),
+      hall: patch.hall ?? '〇〇会館',
+      machineTypeId: patch.machineTypeId ?? 'my-juggler-v',
+      invest,
+      payoutMedals: (invest + patch.profit) / 20,
+      exchangeRate: 20,
+      myCount: { games: 3000, bb: 12, rb: 8, grape: 500, soloRb: 5, cherryRb: 3 },
+    })
+    await finishSession(session.id)
+    return session.id
+  }
+
+  it('記録が無ければその旨を出す', async () => {
+    render(<Stats navigate={navigate} />)
+    expect(await screen.findByText('この期間の記録がありません')).toBeDefined()
+  })
+
+  it('収支・勝率・回転数をまとめて出す', async () => {
+    await finished({ profit: 30000 })
+    await finished({ profit: -10000 })
+
+    render(<Stats navigate={navigate} />)
+
+    // 合計はサマリと累計グラフの最新値の両方に出る
+    expect((await screen.findAllByText('+20,000円')).length).toBeGreaterThan(0)
+    expect(screen.getByText('50%')).toBeDefined()
+    expect(screen.getByText('1勝1敗')).toBeDefined()
+    expect(screen.getByText('6,000')).toBeDefined()
+  })
+
+  it('機種別・店舗別・曜日別に分けて出す', async () => {
+    await finished({ profit: 30000, machineTypeId: 'my-juggler-v', hall: 'A店' })
+    await finished({ profit: -10000, machineTypeId: 'gogo-juggler-3', hall: 'B店' })
+
+    render(<Stats navigate={navigate} />)
+
+    expect(await screen.findByText('機種別')).toBeDefined()
+    expect(screen.getByText('マイジャグラーV')).toBeDefined()
+    expect(screen.getByText('ゴーゴージャグラー3')).toBeDefined()
+    expect(screen.getByText('A店')).toBeDefined()
+    expect(screen.getByText('曜日別')).toBeDefined()
+  })
+
+  it('最高と最低の台を出す', async () => {
+    await finished({ profit: 30000 })
+    await finished({ profit: -10000 })
+
+    render(<Stats navigate={navigate} />)
+    expect(await screen.findByText('最高')).toBeDefined()
+    expect(screen.getByText('最低')).toBeDefined()
+  })
+
+  it('実戦中の記録は集計に入れない', async () => {
+    await finished({ profit: 30000 })
+    const active = await startSession()
+    await updateSession(active.id, { invest: 50000, payoutMedals: 0, exchangeRate: 20 })
+
+    render(<Stats navigate={navigate} />)
+
+    // 実戦中の -50,000円 が混ざっていれば合計は変わってしまう
+    expect((await screen.findAllByText('+30,000円')).length).toBeGreaterThan(0)
+    expect(screen.queryByText('-20,000円')).toBeNull()
+    expect(screen.getByText(/実戦中の記録は収支が確定していないため/)).toBeDefined()
+  })
+
+  it('期間で絞り込める', async () => {
+    await finished({ profit: 30000, date: today() })
+    await finished({ profit: 5000, date: '2020-01-15' })
+
+    render(<Stats navigate={navigate} />)
+    // 既定は「すべて」なので両方が入る
+    expect((await screen.findAllByText('+35,000円')).length).toBeGreaterThan(0)
+
+    fireEvent.click(screen.getByRole('button', { name: '今月' }))
+    await waitFor(() => {
+      expect(screen.getAllByText('+30,000円').length).toBeGreaterThan(0)
+      expect(screen.queryByText('+35,000円')).toBeNull()
+    })
   })
 })
 
