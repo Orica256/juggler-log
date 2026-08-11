@@ -11,6 +11,7 @@ import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/re
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { db } from '../db'
 import { finishSession, getSession, startSession, updateSession } from '../db/sessions'
+import { Estimate } from './Estimate'
 import { Help } from './Help'
 import { History } from './History'
 import { Home } from './Home'
@@ -265,6 +266,68 @@ describe('履歴と詳細', () => {
 
     expect(await screen.findByText('+10,000円')).toBeDefined()
     expect(screen.getByText(/投資 20,000円 \/ 回収 30,000円/)).toBeDefined()
+  })
+})
+
+describe('設定推測', () => {
+  /** マイジャグラーVを1万G打ち、設定6の理論値どおりに当たった状態 */
+  async function highSettingSession() {
+    const session = await startSession()
+    await updateSession(session.id, {
+      machineTypeId: 'my-juggler-v',
+      myCount: { games: 10000, bb: 44, rb: 44, grape: 1541, soloRb: 30, cherryRb: 14 },
+    })
+    return session.id
+  }
+
+  it('設定ごとの確からしさと期待設定を出す', async () => {
+    const id = await highSettingSession()
+    render(<Estimate id={id} navigate={navigate} />)
+
+    expect(await screen.findByText('期待設定')).toBeDefined()
+    expect(screen.getByText('設定ごとの確からしさ')).toBeDefined()
+    expect(screen.getByText('設定6')).toBeDefined()
+  })
+
+  it('判断材料が乏しいうちは、その旨をはっきり書く', async () => {
+    const session = await startSession()
+    await updateSession(session.id, {
+      machineTypeId: 'my-juggler-v',
+      myCount: { games: 300, bb: 1, rb: 1, grape: 49, soloRb: 1, cherryRb: 0 },
+    })
+
+    render(<Estimate id={session.id} navigate={navigate} />)
+    expect(await screen.findByText(/この数字で設定を判断しないでください/)).toBeDefined()
+  })
+
+  it('何がそう言っているのかを指標ごとに示す', async () => {
+    const id = await highSettingSession()
+    render(<Estimate id={id} navigate={navigate} />)
+
+    expect(await screen.findByText('何がそう言っているのか')).toBeDefined()
+    expect(screen.getByText('ボーナス(BB / REG)')).toBeDefined()
+    expect(screen.getByText('単独REG')).toBeDefined()
+  })
+
+  it('解析値が割れている機種では感度分析の結果を出す', async () => {
+    const id = await highSettingSession()
+    render(<Estimate id={id} navigate={navigate} />)
+
+    // マイジャグラーVは設定6のぶどうが 1/5.69 と 1/5.66 で割れている
+    expect(await screen.findByText('ぶどう解析値の食い違いについて')).toBeDefined()
+    expect(screen.getByText(/どちらを採用しても結論は変わりません/)).toBeDefined()
+  })
+
+  it('一様な事前分布で計算していることを断っている', async () => {
+    const id = await highSettingSession()
+    render(<Estimate id={id} navigate={navigate} />)
+    expect(await screen.findByText(/すべての設定が同じ割合で使われている前提/)).toBeDefined()
+  })
+
+  it('機種未選択なら推測できないと伝える', async () => {
+    const session = await startSession()
+    render(<Estimate id={session.id} navigate={navigate} />)
+    expect(await screen.findByText(/機種が選ばれていないため推測できません/)).toBeDefined()
   })
 })
 

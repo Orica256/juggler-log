@@ -126,6 +126,19 @@ export function SessionDetail({
         )}
       </Card>
 
+      {machine && session.myCount.games > 0 && (
+        <button
+          type="button"
+          onClick={() => navigate(`/estimate/${id}`)}
+          className="mt-4 block w-full rounded-xl border border-[var(--color-line)] bg-[var(--color-surface)] p-4 text-left active:brightness-125"
+        >
+          <div className="flex items-baseline justify-between">
+            <span className="text-sm font-semibold">設定推測</span>
+            <span className="text-xs text-[var(--color-muted)]">見る ›</span>
+          </div>
+        </button>
+      )}
+
       <Card className="mt-4">
         <h2 className="text-sm font-semibold">自分の実績</h2>
         {diff ? (

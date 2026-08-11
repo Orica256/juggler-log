@@ -1,4 +1,5 @@
 import { useHashRoute } from './hooks/useHashRoute'
+import { Estimate } from './screens/Estimate'
 import { Help } from './screens/Help'
 import { History } from './screens/History'
 import { Home } from './screens/Home'
@@ -38,6 +39,8 @@ export default function App() {
         return id ? <SessionPlay id={id} navigate={navigate} /> : <Home navigate={navigate} />
       case 'end':
         return id ? <SessionEnd id={id} navigate={navigate} /> : <Home navigate={navigate} />
+      case 'estimate':
+        return id ? <Estimate id={id} navigate={navigate} /> : <Home navigate={navigate} />
       case 'session':
         return id ? <SessionDetail id={id} navigate={navigate} /> : <History navigate={navigate} />
       case 'history':

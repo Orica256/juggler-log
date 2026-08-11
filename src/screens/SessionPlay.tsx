@@ -11,6 +11,7 @@ import {
   incrementCount,
   updateMyCount,
 } from '../db/sessions'
+import { estimateSetting } from '../lib/bayes'
 import { workedHours } from '../lib/calc'
 import { recommendedManualCount } from '../lib/discrimination'
 import type { CountAction } from '../lib/counting'
@@ -198,6 +199,40 @@ export function SessionPlay({
           </p>
         )}
       </Card>
+
+      {machine && (
+        <button
+          type="button"
+          onClick={() => navigate(`/estimate/${id}`)}
+          className="mt-4 block w-full rounded-xl border border-[var(--color-line)] bg-[var(--color-surface)] p-4 text-left active:brightness-125"
+        >
+          {(() => {
+            const estimation = estimateSetting(machine, session.myCount)
+            return (
+              <>
+                <div className="flex items-baseline justify-between">
+                  <span className="text-sm font-semibold">設定推測</span>
+                  <span className="text-xs text-[var(--color-muted)]">内訳を見る ›</span>
+                </div>
+                <div className="mt-2 flex items-baseline gap-4">
+                  <span className="text-2xl font-bold tabular-nums">
+                    設定 {estimation.expectedSetting.toFixed(1)}
+                  </span>
+                  <span className="text-xs text-[var(--color-muted)]">
+                    設定1・2 {(estimation.lowProbability * 100).toFixed(0)}% ／ 設定5・6{' '}
+                    {(estimation.highProbability * 100).toFixed(0)}%
+                  </span>
+                </div>
+                {estimation.weak && (
+                  <p className="mt-1 text-xs text-[var(--color-muted)]">
+                    まだ判断材料が乏しく、あてになりません
+                  </p>
+                )}
+              </>
+            )
+          })()}
+        </button>
+      )}
 
       <Card className="mt-4">
         <h2 className="text-sm font-semibold">カウントの修正</h2>

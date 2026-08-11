@@ -96,6 +96,29 @@ export function Settings({ navigate }: { navigate: (to: string, replace?: boolea
       </Card>
 
       <Card className="mt-4">
+        <h2 className="mb-3 text-sm font-semibold">設定推測</h2>
+        <Field
+          label="やめ時を知らせる基準"
+          hint="設定1・2である確率がこの値を超えたら、推測画面で知らせます"
+        >
+          <Select
+            value={String(settings.lowSettingAlertThreshold)}
+            onChange={(v) => patch({ lowSettingAlertThreshold: Number(v) })}
+            options={[
+              { value: '60', label: '60%(早めに知らせる)' },
+              { value: '70', label: '70%' },
+              { value: '80', label: '80%(既定)' },
+              { value: '90', label: '90%(確度が高いときだけ)' },
+            ]}
+          />
+        </Field>
+        <p className="mt-3 text-xs leading-relaxed text-[var(--color-muted)]">
+          推測はすべての設定が同じ割合で使われている前提で計算しています。
+          高設定が入りにくい店では、実際にはこれより低く見積もるべきです。
+        </p>
+      </Card>
+
+      <Card className="mt-4">
         <h2 className="text-sm font-semibold">バックアップ</h2>
         <p className="mt-2 text-xs leading-relaxed text-[var(--color-muted)]">
           記録はこの端末の中だけに保存されます。外部へ送信されることはありません。
