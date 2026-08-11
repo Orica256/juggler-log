@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+
+/* ホールは暗いので既定をダークテーマにする */
+@theme {
+  --color-bg: #0b0f19;
+  --color-surface: #151b2b;
+  --color-line: #263048;
+  --color-text: #e8ecf5;
+  --color-muted: #8b96ad;
+  /*
+   * 指標(BB / RB / ぶどう / 単独REG)を色で区別する案は破棄した。
+   * 4色の識別色は、どの組み合わせでも赤緑色覚でどれかの組が判別不能になる
+   * (検証: 青と紫は deutan で ΔE 0.9)。各行にはテキストラベルがあるため
+   * 色に識別を担わせる必要がなく、文字トークンと単一アクセントで構成する。
+   */
+  --color-accent: #5598e7;
+  --color-plus: #22c55e;
+  --color-minus: #f87171;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+  overscroll-behavior-y: contain;
+  /*
+   * iOS Safari は user-scalable=no を無視するため、ダブルタップズーム判定が生きたままになる。
+   * これがあるとタップごとに約300msの遅延が入るので、CSS側で明示的に切る。
+   */
+  touch-action: manipulation;
+}
+
+/* iPhone のノッチ / ホームバー回避 */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}

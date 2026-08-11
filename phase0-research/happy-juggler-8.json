@@ -1,0 +1,76 @@
+{
+  "id": "happy-juggler-8",
+  "name": "ハッピージャグラーVIII",
+  "nameVariants": ["ハッピージャグラーVⅢ", "ハッピージャグラーV3", "SハッピージャグラーVIII"],
+  "maker": "北電子",
+  "releaseYear": 2022,
+  "releaseDate": "2022-10-24",
+  "spec": "6.0号機",
+  "settings": [
+    { "setting": 1, "bbProb": 273.1, "rbProb": 397.2, "totalProb": 161.8, "grapeProb": 6.07, "payoutRate": 97.0 },
+    { "setting": 2, "bbProb": 270.8, "rbProb": 362.1, "totalProb": 154.9, "grapeProb": 6.03, "payoutRate": 98.1 },
+    { "setting": 3, "bbProb": 263.2, "rbProb": 332.7, "totalProb": 146.9, "grapeProb": 6.00, "payoutRate": 99.9 },
+    { "setting": 4, "bbProb": 254.0, "rbProb": 300.6, "totalProb": 137.7, "grapeProb": 5.86, "payoutRate": 102.9 },
+    { "setting": 5, "bbProb": 239.2, "rbProb": 273.1, "totalProb": 127.5, "grapeProb": 5.84, "payoutRate": 105.8 },
+    { "setting": 6, "bbProb": 226.0, "rbProb": 256.0, "totalProb": 120.0, "grapeProb": 5.80, "payoutRate": 108.4 }
+  ],
+  "notes": "【ボーナス確率】BB/RB/合算は調査した7サイト全てで完全一致。メーカー公表相当とみなせる。RB確率が設定1〜6で約1.55倍と設定差が大きく、最有力の判別要素。【ぶどう確率】メーカー非公表のため各サイトの解析値が割れている（conflicts参照）。採用値は juggler7 / jugglersnet / ぽこすろっと(nankaikoya) の3ソースが完全一致した系列。設定1〜3と設定4〜6の間に段差があり、5.9を境に高低設定を分ける形になっている。設定1と設定6の差は約1.05倍と小さめ。【チェリー】ジャグラーとしては珍しく高設定ほどチェリー確率が「悪くなる」逆設定差（juggler7値: 設定1=1/62.57, 2=1/62.93, 3=1/63.77, 4=1/64.38, 5=1/65.52, 6=1/65.91。jugglertopics値: 1/62.1, 1/61.5, 1/61.1, 1/64.5, 1/64.9, 1/65.5）。【チェリー重複】本機最大の特徴で、チェリー+REGに強い設定差（jugglertopics値: 設定1=1/1057.1, 2=1/993.0, 3=1/885.7, 4=1/809.1, 5=1/728.9, 6=1/641.0）。チェリー+BIG（設定1=1/1485.9, 2=1/1488.1, 3=1/1490.3, 4=1/1215.1, 5=1/1212.1, 6=1/1213.6）は設定1〜3/4〜6の2段階。チェリー重複合算は設定1=1/617.7 → 設定6=1/419.5。【ピエロ・ベル】jugglertopics掲載値は設定差が単調でなく実戦値の可能性が高いため判別には非推奨。【単独REG】全設定分の信頼できる数値は発見できず null 相当。【ベース】約42G/50枚（設定共通）。",
+  "sources": [
+    { "url": "https://chonborista.com/slot/kitadenshi/173776/", "name": "ちょんぼりすた", "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"] },
+    { "url": "https://imakati.jp/happy-juggler-v3", "name": "イマカチ", "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate"] },
+    { "url": "https://juggler7.com/happy3/kaiseki.html", "name": "ジャグラー7", "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "cherryProb"] },
+    { "url": "https://jugglersnet.com/analysis/budo-6", "name": "ジャグラーズネット（6号機ぶどう確率設定差まとめ）", "checkedFields": ["grapeProb"] },
+    { "url": "https://www.nankaikoya.jp/juggler-budou/", "name": "ぽこすろっと（ジャグラーぶどう確率一覧）", "checkedFields": ["grapeProb"] },
+    { "url": "https://grape-reverse.com/happyv3", "name": "GrapeReverse", "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate"] },
+    { "url": "https://jugglertopics.jp/hjv3/334/", "name": "ジャグラートピックス", "checkedFields": ["grapeProb", "cherryProb", "cherryBonusProb"] },
+    { "url": "https://kenslo65536.com/hanbetsu/juggler-happyv3.html", "name": "けんのスロットシミュレーション（設定判別ツール）", "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb"] },
+    { "url": "https://juggonea.com/happy-grape", "name": "ジャグラーの極意", "checkedFields": ["grapeProb"] },
+    { "url": "https://www.slopachi-quest.com/article/happyjugglerv3-settei/", "name": "スロパチクエスト", "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "releaseDate"] },
+    { "url": "https://p-gabu.jp/guideworks/machinecontents/detail/6195/summarize", "name": "P-GABU", "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb"] },
+    { "url": "https://1geki.jp/slot/s_happyjuggler_v3/4/", "name": "一撃", "checkedFields": ["grapeProb"] }
+  ],
+  "conflicts": [
+    {
+      "field": "ぶどう確率（設定1〜6の系列全体）",
+      "values": [
+        "採用系列 6.07 / 6.03 / 6.00 / 5.86 / 5.84 / 5.80 （juggler7, jugglersnet, ぽこすろっと の3ソースで完全一致）",
+        "6.04 / 6.01 / 5.98 / 5.86 / 5.84 / 5.82 （けんのスロットシミュレーション, ジャグラーの極意 の2ソース）",
+        "6.04 / 6.01 / 5.98 / 5.84 / 5.81 / 5.79 （イマカチ）",
+        "6.05 / 6.01 / 5.98 / 5.83 / 5.81 / 5.79 （GrapeReverse。スロパチクエストも設定1=6.05・設定6=5.79で同系）",
+        "6.05 / 6.04 / 6.02 / 5.90 / 5.81 / 5.75 （ジャグラートピックス。設定2〜4が他と大きく乖離する外れ値）",
+        "6.06 / 6.05 / 5.97 / 5.84 / 5.81 / 5.80 （P-GABU。実戦値と明記）"
+      ],
+      "sources": [
+        "https://juggler7.com/happy3/kaiseki.html",
+        "https://jugglersnet.com/analysis/budo-6",
+        "https://www.nankaikoya.jp/juggler-budou/",
+        "https://kenslo65536.com/hanbetsu/juggler-happyv3.html",
+        "https://juggonea.com/happy-grape",
+        "https://imakati.jp/happy-juggler-v3",
+        "https://grape-reverse.com/happyv3",
+        "https://jugglertopics.jp/hjv3/334/",
+        "https://p-gabu.jp/guideworks/machinecontents/detail/6195/summarize"
+      ],
+      "note": "北電子は小役確率を公表しないため、全て第三者の解析値・逆算値。集計基準（通常時のみ / ボーナス重複分を含むか）の違いが原因と推測される。ばらつきの幅は設定1で0.03、設定6で0.07程度。ベイズ推定に使う際はぶどう単独の尤度を過信せず、ボーナス確率と併用すること。"
+    },
+    {
+      "field": "設定3の出玉率",
+      "values": ["99.9（ちょんぼりすた, イマカチ, juggler7, GrapeReverse）", "99.8（一部まとめサイト）"],
+      "sources": ["https://chonborista.com/slot/kitadenshi/173776/", "https://juggler7.com/happy3/kaiseki.html"],
+      "note": "多数決で99.9を採用。差は0.1%で実用上ほぼ影響なし。"
+    },
+    {
+      "field": "導入日",
+      "values": ["2022-10-24（複数サイト・多数派）", "2022-10-22（スロパチクエスト）"],
+      "sources": ["https://www.slopachi-quest.com/article/happyjugglerv3-settei/"],
+      "note": "判別数値には影響しない。"
+    },
+    {
+      "field": "チェリー確率（設定1〜3）",
+      "values": ["1/62.57, 1/62.93, 1/63.77（juggler7）", "1/62.1, 1/61.5, 1/61.1（ジャグラートピックス）"],
+      "sources": ["https://juggler7.com/happy3/kaiseki.html", "https://jugglertopics.jp/hjv3/334/"],
+      "note": "juggler7は設定1→6で単調に悪化、jugglertopicsは設定1〜3で改善→設定4以降で悪化と傾向自体が異なる。チェリーを判別に使うのは非推奨。"
+    }
+  ],
+  "confidence": "medium"
+}

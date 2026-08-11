@@ -1,0 +1,161 @@
+{
+  "id": "gogo-juggler-3",
+  "name": "ゴーゴージャグラー3",
+  "maker": "北電子",
+  "releaseYear": 2023,
+  "spec": "6号機",
+  "settings": [
+    {
+      "setting": 1,
+      "bbProb": 259.0,
+      "rbProb": 354.2,
+      "totalProb": 149.6,
+      "grapeProb": 6.25,
+      "payoutRate": 97.2
+    },
+    {
+      "setting": 2,
+      "bbProb": 258.0,
+      "rbProb": 332.7,
+      "totalProb": 145.3,
+      "grapeProb": 6.20,
+      "payoutRate": 98.2
+    },
+    {
+      "setting": 3,
+      "bbProb": 257.0,
+      "rbProb": 306.2,
+      "totalProb": 139.7,
+      "grapeProb": 6.15,
+      "payoutRate": 99.4
+    },
+    {
+      "setting": 4,
+      "bbProb": 254.0,
+      "rbProb": 268.6,
+      "totalProb": 130.5,
+      "grapeProb": 6.07,
+      "payoutRate": 101.6
+    },
+    {
+      "setting": 5,
+      "bbProb": 247.3,
+      "rbProb": 247.3,
+      "totalProb": 123.7,
+      "grapeProb": 6.00,
+      "payoutRate": 103.8
+    },
+    {
+      "setting": 6,
+      "bbProb": 234.9,
+      "rbProb": 234.9,
+      "totalProb": 117.4,
+      "grapeProb": 5.92,
+      "payoutRate": 106.5
+    }
+  ],
+  "notes": "【採用バージョン】『ゴーゴージャグラー3』2023年7月3日導入、6号機(6.5号機と表記するサイトもあるが型式区分は6号機Aタイプ)。全国約4,780店舗設置。型式違いは存在せず単一バージョンのため、バージョン選択の問題は発生しない。前作『ゴーゴージャグラー2』とはぶどう確率が大きく異なる(2はおおむね1/6.8〜1/6.5台)ので、データ流用は不可。\n\n【ぶどう確率の性質】北電子は小役確率を非公表。ぶどう確率は全て第三者の解析値/逆算値。ただしアイムと異なり設定1〜6が全て別々の値を取る段階的設定差になっており、ジャグラーシリーズ中でも低設定〜高設定間のぶどう確率差が最も大きい部類。分母が小さく収束が速いため、ベイズ判別の主指標として機能する。特に設定3と設定4の間の差(6.15→6.07)が相対的に大きい。\n\n【重要な注意点】1枚掛け時のぶどうはカウント対象外(通常の3枚掛けとは別抽選)。実戦カウント運用時はこれを除外する必要がある。\n\n【ぶどう以外の設定判別要素】\n・単独BIG確率(設定1→6): 1/379.1, 1/376.9, 1/378.6, 1/378.7, 1/369.5, 1/352.4 ※設定差は極めて小さく判別価値は低い。\n・単独REG確率(設定1→6): 1/472.3, 1/447.4, 1/417.8, 1/362.9, 1/331.0, 1/317.2 ※設定差が大きく、ぶどうに次ぐ主要判別要素。\n・単独ボーナス合成(設定1→6): 1/210.3, 1/204.6, 1/198.6, 1/185.3, 1/174.6, 1/166.9\n・チェリー確率(設定1→6): 1/33.56, 1/33.47, 1/33.32, 1/33.15, 1/33.10, 1/32.97 ※設定差が僅少で判別にはほぼ使えない。\n・BR比率: 設定5・6でBIG:REG=1:1(設定5=1/247.3同値、設定6=1/234.9同値)。設定1〜4はBIG優勢。設定5と設定6は比率が同じで区別できないため、絶対値(合算)とぶどうで切り分ける必要がある。\n・チェリー重複ボーナス合算: 1/611.2〜1/454.1 の範囲で設定差あり(jugglertopics 独自調査値、他ソース未検証のため参考値)。\n・純増: BB約240枚 / RB約96枚。天井なし。完全後告知タイプ。\n・設定1の合算1/149.6はマイジャグラーV設定3相当(1/148.6)で全設定甘めのため、合算単独での判別は危険。\n\n【確度の内訳】BB/RB/合算/出玉率は6情報源(juggler7, ぽこすろっと, 一撃, P-WORLD, スロパチクエスト, P-TOWN)が完全一致し確度は非常に高い。ぶどう確率は主流値(6.25〜5.92)を3情報源が支持するものの、別系統の数値が最低2種類流通しており(conflicts参照)、アイムより不確実性が高い。ベイズ推定に用いる際はぶどうの尤度に安全マージン(値の不確かさ ±0.05 程度)を見込むことを推奨。",
+  "sources": [
+    {
+      "url": "https://juggler7.com/gogo3/kaiseki.html",
+      "name": "juggler7.com (Sゴーゴージャグラー3 解析攻略)",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "単独BIG", "単独REG", "チェリー確率"]
+    },
+    {
+      "url": "https://juggler7.com/gogo3/settei-hanbetu.html",
+      "name": "juggler7.com (設定差・設定判別ポイント)",
+      "checkedFields": ["grapeProb", "totalProb", "単独REG", "チェリー確率"]
+    },
+    {
+      "url": "https://grape-reverse.com/gogo3",
+      "name": "GrapeReverse (ゴーゴージャグラー3 設定判別・ぶどう逆算ツール)",
+      "checkedFields": ["grapeProb"]
+    },
+    {
+      "url": "https://www.nankaikoya.jp/gogojuggler3/",
+      "name": "ぽこすろっと (ゴーゴージャグラー3 設定判別)",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate"]
+    },
+    {
+      "url": "https://1geki.jp/slot/s_gogojuggler3/",
+      "name": "一撃 (ゴーゴージャグラー3 解析攻略)",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"]
+    },
+    {
+      "url": "https://1geki.jp/slot/s_gogojuggler3/4/",
+      "name": "一撃 (小役確率と通常時のベース / 設定6実戦値7528G)",
+      "checkedFields": ["grapeProb"]
+    },
+    {
+      "url": "https://www.p-world.co.jp/machine/database/9848",
+      "name": "P-WORLD 機種データベース",
+      "checkedFields": ["payoutRate", "導入日", "設置店舗数"]
+    },
+    {
+      "url": "https://www.slopachi-quest.com/article/gogojuggler3-settei/",
+      "name": "スロパチクエスト (ゴーゴージャグラー3 設定差まとめ)",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"]
+    },
+    {
+      "url": "https://p-town.dmm.com/specials/3073",
+      "name": "P-TOWN (DMM) ゴーゴージャグラー3 設定差特集",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"]
+    },
+    {
+      "url": "https://note.com/apt_flea1081/n/ne0a6bc6cba5d",
+      "name": "note 次郎マサオ (6.5号機ゴーゴージャグラー3 設定差まとめ)",
+      "checkedFields": ["grapeProb", "単独BIG", "単独REG", "チェリー確率"]
+    },
+    {
+      "url": "https://jugglertopics.jp/gj3/353/",
+      "name": "ジャグラートピックス (独自調査値)",
+      "checkedFields": ["grapeProb", "チェリー重複"]
+    },
+    {
+      "url": "https://pachiseven.jp/machines/6760/cutout/1007",
+      "name": "パチセブン 小役確率 (設定6実戦値4515G)",
+      "checkedFields": ["grapeProb"]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "ぶどう確率(設定1〜6全体) - 3系統の数値が流通",
+      "values": [
+        "系統A(採用): 6.25 / 6.20 / 6.15 / 6.07 / 6.00 / 5.92",
+        "系統B: 6.23 / 6.20 / 6.14 / 6.07 / 6.00 / 5.94",
+        "系統C: 6.28 / 6.22 / 6.15 / 6.09 / 6.02 / 5.96",
+        "系統D(独自調査): 6.33 → 5.96 (設定1→6、中間値の内訳非公開)"
+      ],
+      "sources": [
+        "https://juggler7.com/gogo3/kaiseki.html",
+        "https://grape-reverse.com/gogo3",
+        "https://note.com/apt_flea1081/n/ne0a6bc6cba5d",
+        "https://www.nankaikoya.jp/gogojuggler3/",
+        "https://jugglertopics.jp/gj3/353/"
+      ],
+      "note": "settings 配列には最多支持の系統A(juggler7 / GrapeReverse / note次郎マサオ の3独立情報源が完全一致)を採用。系統Bはぽこすろっと単独、系統Cは検索結果経由で出典特定に至らず、系統Dはジャグラートピックスの独自調査(公式解析値ではないと明記あり)。系統間の差は最大0.08程度で判別実務上の影響は小さいが、ベイズ推定の尤度計算では無視できないため記録する。"
+    },
+    {
+      "field": "設定6のぶどう確率",
+      "values": ["5.92 (採用・解析値)", "5.94", "5.96", "6.1 (パチセブン設定6実戦値4515G)", "6.2 (一撃 設定6実戦値7528G)"],
+      "sources": [
+        "https://juggler7.com/gogo3/kaiseki.html",
+        "https://www.nankaikoya.jp/gogojuggler3/",
+        "https://jugglertopics.jp/gj3/353/",
+        "https://pachiseven.jp/machines/6760/cutout/1007",
+        "https://1geki.jp/slot/s_gogojuggler3/4/"
+      ],
+      "note": "1/6.1・1/6.2 はいずれも数千G規模の単一ホール実戦値であり理論値ではない(サンプル不足による下振れ)。理論値としては解析値 5.92 を採用。"
+    },
+    {
+      "field": "型式区分の表記",
+      "values": ["6号機Aタイプ", "6.5号機"],
+      "sources": [
+        "https://www.p-world.co.jp/machine/database/9848",
+        "https://note.com/apt_flea1081/n/ne0a6bc6cba5d"
+      ],
+      "note": "規則上は6号機(6.5号機は6号機内の内規世代を指す通称)。spec フィールドには '6号機' を記載。"
+    }
+  ],
+  "confidence": "medium"
+}

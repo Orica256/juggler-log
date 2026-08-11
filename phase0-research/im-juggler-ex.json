@@ -1,0 +1,146 @@
+{
+  "id": "im-juggler-ex",
+  "name": "アイムジャグラーEX",
+  "maker": "北電子",
+  "releaseYear": 2020,
+  "spec": "6号機",
+  "settings": [
+    {
+      "setting": 1,
+      "bbProb": 273.1,
+      "rbProb": 439.8,
+      "totalProb": 168.5,
+      "grapeProb": 6.02,
+      "payoutRate": 97.0
+    },
+    {
+      "setting": 2,
+      "bbProb": 269.7,
+      "rbProb": 399.6,
+      "totalProb": 161.0,
+      "grapeProb": 6.02,
+      "payoutRate": 98.0
+    },
+    {
+      "setting": 3,
+      "bbProb": 269.7,
+      "rbProb": 331.0,
+      "totalProb": 148.6,
+      "grapeProb": 6.02,
+      "payoutRate": 99.5
+    },
+    {
+      "setting": 4,
+      "bbProb": 259.0,
+      "rbProb": 315.1,
+      "totalProb": 142.2,
+      "grapeProb": 6.02,
+      "payoutRate": 101.1
+    },
+    {
+      "setting": 5,
+      "bbProb": 259.0,
+      "rbProb": 255.0,
+      "totalProb": 128.5,
+      "grapeProb": 6.02,
+      "payoutRate": 103.3
+    },
+    {
+      "setting": 6,
+      "bbProb": 255.0,
+      "rbProb": 255.0,
+      "totalProb": 127.5,
+      "grapeProb": 5.78,
+      "payoutRate": 105.5
+    }
+  ],
+  "notes": "【採用バージョン】6号機『アイムジャグラーEX』(2020年12月14日導入・約55,000台)を採用。ユーザー提示の EX-AE / EX-TP は5号機時代の型式(アイムジャグラーEX-AE 等)であり、5号機は既に設置期限切れのため対象外とした。5号機版はボーナス合算 1/176.2〜1/134.3 で本データとは別物なので混同注意。\n\n【後継機に関する重要事項】2025年9月1日に正統後継機『ネオアイムジャグラーEX』(約70,000台)が導入されており、2026年8月時点のホール主力は本機からネオアイムへ移行が進んでいる可能性が高い。ただし複数情報源が「ネオアイムのボーナス確率は前作アイムジャグラーEXと完全に同一」「ぶどうも設定1〜5:1/6.02、設定6:1/5.78で同一」と報じているため、本ファイルの数値はネオアイムジャグラーEXにもそのまま適用できる見込み。ただしネオアイム独自の一次検証は本調査では未実施のため、ネオアイムを対象にする場合は別途確認が必要。\n\n【ぶどう確率の性質】北電子は小役確率を公表していない。ぶどう確率は全て第三者の解析値/実戦値であり、メーカー公表値ではない。本機は「設定1〜5が共通確率、設定6のみ優遇」という構造で、ぶどうは実質「設定6か否か」の二値判別にしか使えない点に注意(ベイズ推定モデル設計上、設定1〜5間ではぶどうの尤度が完全に同一になる)。設定1〜5の判別はREG確率・合算確率・単独REGに依存する。\n\n【ぶどう以外の設定判別要素】\n・単独REG確率(設定1→6): 1/630.15, 1/574.88, 1/474.90, 1/448.88, 1/364.09, 1/364.09 (p-town DMM)。別ソース(juggler7)では設定1=1/633.4、設定6=1/361.7。設定5と設定6は同値。\n・チェリー重複REG確率(設定1→6): 1/1456.36, 1/1310.72, 1/1092.27, 1/1057.03, 1/851.12, 1/851.12 (p-town DMM)。最高設定と最低設定で約1.67倍差があり、REG関連では最大級の設定差。設定5と設定6は同値。\n・BR比率: 設定5・6でBIG:REG=1:1(BB=RB=1/255.0)。設定1〜4はBIG優勢。\n・チェリー確率: 設定差はほぼ無く判別に使えない(1geki実戦値で設定1=1/36.36、設定6=1/35.73)。\n・BIG獲得約252枚 / REG獲得約96枚、ベース約40G/50枚。天井なし。\n\n【確度の内訳】BB/RB/合算/出玉率は6情報源が完全一致(実質メーカー公表相当)で確度は非常に高い。ぶどうは4情報源が 6.02/5.78 で一致するが解析値であり、1geki のシミュレーション実戦値とは僅差の食い違いがある(conflicts 参照)。",
+  "sources": [
+    {
+      "url": "https://juggler7.com/aimex-6gouki/kaiseki.html",
+      "name": "juggler7.com (SアイムジャグラーEX(6号機) 解析攻略)",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate"]
+    },
+    {
+      "url": "https://juggler7.com/aimex-6gouki/settei-hanbetu.html",
+      "name": "juggler7.com (設定差・設定判別ポイント)",
+      "checkedFields": ["grapeProb", "totalProb", "単独REG"]
+    },
+    {
+      "url": "https://www.nankaikoya.jp/aimujuggler-6gouki/",
+      "name": "ぽこすろっと (アイムジャグラー6号機 設定判別)",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate"]
+    },
+    {
+      "url": "https://p-town.dmm.com/machines/3626",
+      "name": "P-TOWN (DMM) アイムジャグラーEX(6号機) 機種ページ",
+      "checkedFields": ["grapeProb", "payoutRate", "単独REG", "チェリー重複REG"]
+    },
+    {
+      "url": "https://p-town.dmm.com/specials/2552",
+      "name": "P-TOWN (DMM) アイムジャグラー6号機の設定差特集",
+      "checkedFields": ["bbProb", "rbProb", "totalProb"]
+    },
+    {
+      "url": "https://1geki.jp/slot/s_ij_ex_6/",
+      "name": "一撃 (アイムジャグラーEX 6号機 解析攻略)",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"]
+    },
+    {
+      "url": "https://1geki.jp/slot/s_ij_ex_6/4/",
+      "name": "一撃 (小役確率と通常時のベース / 600万G実機シミュレーション実戦値)",
+      "checkedFields": ["grapeProb", "チェリー確率"]
+    },
+    {
+      "url": "https://chonborista.com/slot/kitadenshi/103087/",
+      "name": "ちょんぼりすた パチスロ解析",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate", "導入日"]
+    },
+    {
+      "url": "https://pachiseven.jp/machines/5949",
+      "name": "パチセブン アイムジャグラーEX(6号機)",
+      "checkedFields": ["payoutRate", "導入日"]
+    },
+    {
+      "url": "https://www.slopachi-quest.com/article/neo-imjugglerex-settei/",
+      "name": "スロパチクエスト (ネオアイムジャグラーEX 設定差)",
+      "checkedFields": ["grapeProb", "後継機との同一性"]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "ぶどう確率(全設定) - 解析値 vs シミュレーション実戦値",
+      "values": [
+        "解析値: 設定1〜5=6.02 / 設定6=5.78",
+        "実戦値(600万G): 設定1=6.06, 設定2=6.04, 設定3=6.04, 設定4=6.04, 設定5=6.02, 設定6=5.80"
+      ],
+      "sources": [
+        "https://juggler7.com/aimex-6gouki/kaiseki.html",
+        "https://www.nankaikoya.jp/aimujuggler-6gouki/",
+        "https://p-town.dmm.com/machines/3626",
+        "https://1geki.jp/slot/s_ij_ex_6/4/"
+      ],
+      "note": "settings 配列には多数派(4情報源が一致)の解析値 6.02/5.78 を採用。1geki の値は実機シミュレーションアプリによる実戦値であり、設定1〜4の微差(6.04〜6.06)はサンプリング誤差の可能性が高い。ベイズ推定では解析値の採用を推奨。"
+    },
+    {
+      "field": "ぶどう確率(設定6) - 少数派の実戦値",
+      "values": ["5.78 (解析値)", "5.95 (P-TOWN設定6実戦データ)", "5.80 (1geki実戦値)"],
+      "sources": [
+        "https://juggler7.com/aimex-6gouki/kaiseki.html",
+        "https://p-town.dmm.com/specials/2552",
+        "https://1geki.jp/slot/s_ij_ex_6/4/"
+      ],
+      "note": "1/5.95 は P-TOWN が掲載した単一ホールの設定6実戦データであり理論値ではない。理論値としては 5.78 を採用。"
+    },
+    {
+      "field": "単独REG確率(設定1・設定6)",
+      "values": ["設定1=630.15 / 設定6=364.09", "設定1=633.4 / 設定6=361.7"],
+      "sources": [
+        "https://p-town.dmm.com/machines/3626",
+        "https://juggler7.com/aimex-6gouki/settei-hanbetu.html"
+      ],
+      "note": "誤差1%未満。どちらも逆算値のため丸め方の差と思われる。settings 配列の必須項目ではないため notes に両方記載。"
+    }
+  ],
+  "confidence": "high"
+}

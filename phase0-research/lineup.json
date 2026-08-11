@@ -1,0 +1,183 @@
+{
+  "surveyedAt": "2026-08-11",
+  "machines": [
+    {
+      "id": "my-juggler-5",
+      "name": "マイジャグラーⅤ",
+      "releaseYear": 2021,
+      "spec": "6号機",
+      "status": "主力",
+      "priority": "high",
+      "note": "導入日2021-12-06。設置台数ランキング1位、稼働も最強クラス。設定6出玉率109.4%でホールの主力・高設定投入機。後継のマイジャグラーⅥ導入(2026-10-05予定)後も当面は併存見込み。"
+    },
+    {
+      "id": "neo-im-juggler-ex",
+      "name": "ネオアイムジャグラーEX",
+      "releaseYear": 2025,
+      "spec": "6号機",
+      "status": "主力",
+      "priority": "high",
+      "note": "導入日2025-09-01。アイムジャグラーEX(2020年)の正統後継機。設置台数ランキング2位で拡大中。大型店では数十台規模の導入例あり。BB約252枚/RB約96枚、先告知1/4・後告知3/4。"
+    },
+    {
+      "id": "gogo-juggler-3",
+      "name": "ゴーゴージャグラー3",
+      "releaseYear": 2023,
+      "spec": "6号機",
+      "status": "主力",
+      "priority": "high",
+      "note": "導入日2023-07-03。設置台数ランキング3位で安定した設置。"
+    },
+    {
+      "id": "funky-juggler-2",
+      "name": "ファンキージャグラー2",
+      "releaseYear": 2021,
+      "spec": "6号機",
+      "status": "主力",
+      "priority": "high",
+      "note": "導入日2021-10-04。設置台数ランキング4位。機械割の評価が高く、6号機ジャグラー中でBB確率が高い部類。"
+    },
+    {
+      "id": "im-juggler-ex",
+      "name": "アイムジャグラーEX",
+      "releaseYear": 2020,
+      "spec": "6号機",
+      "status": "減少中",
+      "priority": "high",
+      "note": "導入日2020-12-14。6号機ジャグラー第1弾。設置台数ランキング6位で減少傾向。導入から6年経過し認定期限(2026年末前後と報じられる)を迎えつつあり、ネオアイムジャグラーEXへの入替が進行中。ただし2026年8月時点では依然として設置店舗数が多く実戦機会は多い。"
+    },
+    {
+      "id": "happy-juggler-v3",
+      "name": "ハッピージャグラーVⅢ",
+      "releaseYear": 2022,
+      "spec": "6号機",
+      "status": "主力",
+      "priority": "medium",
+      "note": "導入日2022-10-24。設置台数ランキング5位で中位。設置店は主力機ほど多くない。"
+    },
+    {
+      "id": "ultra-miracle-juggler",
+      "name": "ウルトラミラクルジャグラー",
+      "releaseYear": 2024,
+      "spec": "6号機",
+      "status": "主力",
+      "priority": "low",
+      "note": "導入日2024-12-02。6号機ジャグラーシリーズ第8弾。BB確率が6号機ジャグラー中で最も高い部類。ただし設置台数ランキングは25位圏外で設置は限定的。設定変更時のガックンあり。"
+    },
+    {
+      "id": "mr-juggler",
+      "name": "ミスタージャグラー",
+      "releaseYear": 2024,
+      "spec": "6号機",
+      "status": "主力",
+      "priority": "low",
+      "note": "導入日2024-07-22。設置台数ランキング25位圏外で設置は限定的。"
+    },
+    {
+      "id": "juggler-girls-ss",
+      "name": "ジャグラーガールズSS",
+      "releaseYear": 2024,
+      "spec": "6号機",
+      "status": "主力",
+      "priority": "low",
+      "note": "導入日2024-04-08。設置台数ランキング25位圏外で設置は限定的。"
+    },
+    {
+      "id": "my-juggler-6",
+      "name": "マイジャグラーⅥ",
+      "releaseYear": 2026,
+      "spec": "6号機",
+      "status": "未導入",
+      "priority": "high",
+      "note": "導入予定日2026-10-05。調査時点(2026-08-11)ではホール未導入のため status は enum 外の「未導入」とした。ノーマルAタイプでスマスロではない。ボーナス合成確率1/163.8(設定1)〜1/114.6(設定6)、設定6出玉率109.4%。BB約240枚/RB約96枚。「トラっぴタッチ」リニューアル、「スターGOGO!」「波紋GOGO!」等のプレミア演出を追加。導入後は主力化が見込まれるため記録ツールでの優先対応が必要。"
+    },
+    {
+      "id": "my-juggler-4",
+      "name": "マイジャグラーⅣ",
+      "releaseYear": 2018,
+      "spec": "5号機",
+      "status": "撤去済み",
+      "priority": "low",
+      "note": "設置期限2022-01-31で撤去済み。"
+    },
+    {
+      "id": "gogo-juggler-2",
+      "name": "ゴーゴージャグラー2",
+      "releaseYear": 2019,
+      "spec": "5号機",
+      "status": "撤去済み",
+      "priority": "low",
+      "note": "認定期限(2020年10-11月+1年)終了により撤去済み。"
+    },
+    {
+      "id": "im-juggler-ex-ae",
+      "name": "アイムジャグラーEX-AE",
+      "releaseYear": 2017,
+      "spec": "5号機",
+      "status": "撤去済み",
+      "priority": "low",
+      "note": "設置期限2022-01-31で撤去済み。"
+    },
+    {
+      "id": "super-miracle-juggler",
+      "name": "スーパーミラクルジャグラー",
+      "releaseYear": 2017,
+      "spec": "5号機",
+      "status": "撤去済み",
+      "priority": "low",
+      "note": "設置期限2022-01-31で撤去済み。"
+    },
+    {
+      "id": "new-im-juggler-ex-ka",
+      "name": "ニューアイムジャグラーEX-KA",
+      "releaseYear": 2016,
+      "spec": "5号機",
+      "status": "撤去済み",
+      "priority": "low",
+      "note": "設置期限2022-01-31で撤去済み。"
+    },
+    {
+      "id": "funky-juggler",
+      "name": "ファンキージャグラー",
+      "releaseYear": 2016,
+      "spec": "5号機",
+      "status": "撤去済み",
+      "priority": "low",
+      "note": "設置期限2022-01-31で撤去済み。"
+    },
+    {
+      "id": "my-juggler-3",
+      "name": "マイジャグラーⅢ",
+      "releaseYear": 2015,
+      "spec": "5号機",
+      "status": "撤去済み",
+      "priority": "low",
+      "note": "設置期限2022-01-31で撤去済み。"
+    }
+  ],
+  "sources": [
+    "https://p-town.dmm.com/machines/series/574",
+    "https://p-town.dmm.com/specials/news/10174",
+    "https://jugjug.net/6jugg-rank",
+    "https://jugjug.net/active-juggler-payout",
+    "https://jugjug.net/6goki-juggler",
+    "https://jugjug.net/juggler-tekkyo",
+    "https://juggrap.jp/juggler-chart/",
+    "https://www.kitadenshi.co.jp/slot/",
+    "https://www.goraku-sangyo.com/北電子　新機種「マイジャグラーⅥ」発表/",
+    "https://web-greenbelt.jp/post-95486/",
+    "https://juggonea.com/sumathro",
+    "https://www.nankaikoya.jp/ultra-miracle-juggler/",
+    "https://p-world.co.jp/machine/database/10269",
+    "https://p-world.co.jp/machine/database/9126"
+  ],
+  "uncertainties": [
+    "「6.5号機」「6.6号機」といった内規サブ世代の分類: 参照した全ソースが現行ジャグラー9機種をいずれも単に『6号機』とのみ表記しており、6.5号機/6.6号機に該当するかを明示した一次情報を確認できなかった。ジャグラーはノーマルAタイプであり6.5号機以降の内規緩和は主にAT機向けのため区別されていない可能性が高いが、確証がないため全機種 spec を『6号機』に統一した。",
+    "スマスロ(スマートスロット)版ジャグラーは2026年8月時点で存在しない。2023年に「スマートジャグラー」の商標出願・登録が確認され噂はあるが、機種発表・導入の事実は確認できなかった。マイジャグラーⅥも公式にノーマル6号機でスマスロではない。",
+    "正確な設置台数(実数)は取得できなかった。jugjug.net の設置台数ランキング(2025年9月時点データ)による順位のみを根拠に status/priority を判定している。2026年8月時点の最新実数ではない点に注意。",
+    "アイムジャグラーEX の正確な撤去期限日: 『2026年末前後』『すでに設置期限を終了』とする記述が複数あるが、日付レベルで一致する公式情報を確認できなかった。2026年8月時点で完全撤去されたかは未確定のため status を『減少中』とした。",
+    "マイジャグラーⅥ の status: 導入予定日2026-10-05は調査日(2026-08-11)より後のため、指定された enum(主力/減少中/撤去済み)のいずれにも該当せず『未導入』という値を使用した。後続処理で enum 検証を行う場合は要対応。",
+    "ジャグラーガールズSS / ミスタージャグラー / ウルトラミラクルジャグラー の3機種は『設置台数ランキング25位圏外・設置は限定的』という記述のみが根拠で、相互の設置台数の大小関係は不明。3機種とも priority を low としたが、地域・ホールによっては実戦機会が多い可能性がある。",
+    "5号機ジャグラー各機種の releaseYear は DMM ぱちタウンの導入日を採用。撤去期限は jugjug.net の一覧に基づくが、みなし機としての実際の撤去完了時期はホールにより差があった可能性がある。"
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "id": "my-juggler-v",
+  "name": "マイジャグラーV",
+  "maker": "北電子",
+  "releaseYear": 2021,
+  "releaseDate": "2021-12-06",
+  "spec": "6号機",
+  "settings": [
+    {
+      "setting": 1,
+      "bbProb": 273.1,
+      "rbProb": 409.6,
+      "totalProb": 163.8,
+      "grapeProb": 5.90,
+      "grapeProbAlt": 5.90,
+      "soloRbProb": 652.73,
+      "payoutRate": 97.0
+    },
+    {
+      "setting": 2,
+      "bbProb": 270.8,
+      "rbProb": 385.5,
+      "totalProb": 159.1,
+      "grapeProb": 5.88,
+      "grapeProbAlt": 5.85,
+      "soloRbProb": 607.65,
+      "payoutRate": 98.0
+    },
+    {
+      "setting": 3,
+      "bbProb": 266.4,
+      "rbProb": 336.1,
+      "totalProb": 148.6,
+      "grapeProb": 5.82,
+      "grapeProbAlt": 5.80,
+      "soloRbProb": 500.25,
+      "payoutRate": 99.9
+    },
+    {
+      "setting": 4,
+      "bbProb": 254.0,
+      "rbProb": 290.0,
+      "totalProb": 135.4,
+      "grapeProb": 5.81,
+      "grapeProbAlt": 5.78,
+      "soloRbProb": 411.91,
+      "payoutRate": 102.8
+    },
+    {
+      "setting": 5,
+      "bbProb": 240.1,
+      "rbProb": 268.6,
+      "totalProb": 126.8,
+      "grapeProb": 5.79,
+      "grapeProbAlt": 5.76,
+      "soloRbProb": 397.19,
+      "payoutRate": 105.3
+    },
+    {
+      "setting": 6,
+      "bbProb": 229.1,
+      "rbProb": 229.1,
+      "totalProb": 114.6,
+      "grapeProb": 5.69,
+      "grapeProbAlt": 5.66,
+      "soloRbProb": 333.81,
+      "payoutRate": 109.4
+    }
+  ],
+  "fieldConfidence": {
+    "bbProb": "high",
+    "rbProb": "high",
+    "totalProb": "high",
+    "grapeProb": "medium",
+    "payoutRate": "high",
+    "soloRbProb": "medium"
+  },
+  "notes": "【BB/RB/合算/機械割】9つの独立情報源(スロベース, ぽこすろっと, DMM P-TOWN, ジャグジャグBeats, slothope, juggler7, ちょんぼりすた, ジャグいろは, GrapeReverse)が完全一致。メーカー公表スペックとして信頼度が高い。設定6はBIGとREGが同確率(1/229.1)になるのが最大の特徴。【ぶどう確率】北電子はぶどう確率を公表していないため、全ての数値は第三者によるシミュレート値または大量サンプル実戦値であり、情報源によって系統が割れている。本ファイルでは grapeProb に『なな徹(各設定300万G実戦値)』系の値を、grapeProbAlt に『ガリぞー系シミュレート値』を併記した(スキーマ外の追加フィールド)。ベイズ推定では両系統で感度分析を行うことを強く推奨する。特に設定6は 1/5.69 説と 1/5.66 説が拮抗しており(4源対5源)、どちらか一方を断定できない。【ぶどう以外の設定判別要素】(1)単独REG確率が最大の判別要素。設定1で約1/652.73、設定6で約1/333.81と約2倍の設定差があり、ぶどうより設定差の比率がはるかに大きい(soloRbProb フィールドに記載。出典: なな徹300万G実戦値、スロベースと完全一致)。ただしジャグいろはは理論値と思われる別系統の値(設定1: 1/655.36, 2: 1/595.78, 3: 1/496.48, 4: 1/404.54, 5: 1/390.10, 6: 1/327.68)を掲載しており食い違いがある。(2)単独BIG確率(なな徹300万G実戦値): 設定1=1/410.28, 2=1/408.72, 3=1/413.62, 4=1/379.31, 5=1/348.71, 6=1/345.22。設定3が設定1・2より悪化しており単調でないため、判別指標としては単独REGより弱い。(3)チェリー重複REG(なな徹300万G実戦値): 設定1=1/1091.69, 2=1/1094.48, 3=1/1046.38, 4=1/1026.68, 5=1/888.35, 6=1/759.10。明確な設定差あり。(4)チェリー重複BIG(なな徹300万G実戦値): 設定1=1/1418.43, 2=1/1406.46, 3=1/1393.39, 4=1/1297.56, 5=1/1210.64, 6=1/1165.49。設定差は小さい。(5)チェリー確率(なな徹300万G実戦値): 設定1=1/38.43, 2=1/38.29, 3=1/37.04, 4=1/35.89, 5=1/35.82, 6=1/35.79。設定1・2と設定4〜6の差はあるが中間設定の分離は難しい。(6)ベース: 全設定共通で約42G/50枚。【機械割の別系統値について】payoutRate はメーカー公表値(97.0〜109.4%)。ただし『順押し+チェリー狙い』『完全攻略(ぶどう完全奪取)』を想定したシミュレート値が別に存在し、juggler7は設定1=97.84%/98.61%、設定6=110.45%/112.44%、slothopeは設定1=97.81%〜設定6=111.50%を掲載している。ツールの出玉率表示にどれを使うかは用途次第。",
+  "sources": [
+    {
+      "url": "https://slobase.jp/machines/myjuggler5",
+      "name": "スロベース",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "soloRbProb"]
+    },
+    {
+      "url": "https://www.nankaikoya.jp/myjuggler-five/",
+      "name": "ぽこすろっと",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "soloRbProb"]
+    },
+    {
+      "url": "https://p-town.dmm.com/specials/2538",
+      "name": "DMM P-TOWN 設定差特集",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate"]
+    },
+    {
+      "url": "https://nana-press.com/kaiseki/machine/191/6665/",
+      "name": "なな徹 小役確率(各設定300万G実戦値)",
+      "checkedFields": ["grapeProb"]
+    },
+    {
+      "url": "https://nana-press.com/kaiseki/machine/191/8709/",
+      "name": "なな徹 ボーナス確率詳細(各設定300万G実戦値)",
+      "checkedFields": ["soloRbProb"]
+    },
+    {
+      "url": "https://jugjug.net/myjuggler5",
+      "name": "ジャグジャグBeats!(ぶどうは約10万G実践値)",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate"]
+    },
+    {
+      "url": "https://juggler7.com/my5/kaiseki.html",
+      "name": "juggler7(ぶどうはガリぞー出典)",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate"]
+    },
+    {
+      "url": "https://jug123.com/my5spec/",
+      "name": "ジャグいろは",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "soloRbProb"]
+    },
+    {
+      "url": "https://1geki.jp/slot/s_myj5/4/",
+      "name": "一撃(編集部独自シミュレート 計600万G)",
+      "checkedFields": ["grapeProb"]
+    },
+    {
+      "url": "https://grape-reverse.com/myjuggler5",
+      "name": "GrapeReverse",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate"]
+    },
+    {
+      "url": "https://kenslo65536.com/hanbetsu/juggler-my5.html",
+      "name": "けんのスロットシミュレーション 設定判別ツール",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb"]
+    },
+    {
+      "url": "https://chonborista.com/slot/kitadenshi/152973/",
+      "name": "ちょんぼりすた",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate", "releaseDate", "spec"]
+    },
+    {
+      "url": "https://slothope.com/my-juggler5/",
+      "name": "slothope",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "ぶどう確率(全設定) — 系統そのものの食い違い",
+      "values": [
+        "系統A(なな徹300万G実戦値 / スロベース / P-TOWN): 5.90 / 5.88 / 5.82 / 5.81 / 5.79 / 5.69",
+        "系統B(ぽこすろっと / juggler7[ガリぞー] / ジャグいろは): 5.90 / 5.85 / 5.80 / 5.78 / 5.76 / 5.66",
+        "系統C(一撃 600万Gシミュレート): 5.89 / 5.85 / 5.81 / 5.77 / 5.76 / 5.66",
+        "系統D(GrapeReverse): 5.94 / 5.89 / 5.84 / 5.79 / 5.74 / 5.66",
+        "系統E(けんのスロットシミュレーション): 5.91 / 5.87 / 5.83 / 5.80 / 5.76 / 5.67",
+        "系統F(ジャグジャグBeats 約10万G実践値): 5.93 / 5.90 / 5.84 / 5.80 / 5.79 / 5.69"
+      ],
+      "sources": [
+        "https://nana-press.com/kaiseki/machine/191/6665/",
+        "https://slobase.jp/machines/myjuggler5",
+        "https://p-town.dmm.com/specials/2538",
+        "https://www.nankaikoya.jp/myjuggler-five/",
+        "https://juggler7.com/my5/kaiseki.html",
+        "https://jug123.com/my5spec/",
+        "https://1geki.jp/slot/s_myj5/4/",
+        "https://grape-reverse.com/myjuggler5",
+        "https://kenslo65536.com/hanbetsu/juggler-my5.html",
+        "https://jugjug.net/myjuggler5"
+      ],
+      "resolution": "未解決。北電子の公表値が存在しないため決着不能。grapeProb には系統A(サンプル数が明示され3源一致)、grapeProbAlt には系統B(3源一致)を採用した。どちらも『採用』であって『確定』ではない。"
+    },
+    {
+      "field": "設定6のぶどう確率",
+      "values": ["5.69", "5.66", "5.67"],
+      "sources": [
+        "5.69 (4源): https://nana-press.com/kaiseki/machine/191/6665/ , https://slobase.jp/machines/myjuggler5 , https://p-town.dmm.com/specials/2538 , https://jugjug.net/myjuggler5",
+        "5.66 (5源): https://www.nankaikoya.jp/myjuggler-five/ , https://juggler7.com/my5/kaiseki.html , https://jug123.com/my5spec/ , https://1geki.jp/slot/s_myj5/4/ , https://grape-reverse.com/myjuggler5",
+        "5.67 (1源): https://kenslo65536.com/hanbetsu/juggler-my5.html"
+      ],
+      "resolution": "4対5対1でほぼ拮抗し決着不能。判別ツールの尤度計算で最も影響が大きい箇所なので、必ず両説で感度分析すること。"
+    },
+    {
+      "field": "設定1のぶどう確率",
+      "values": ["5.90", "5.89", "5.91", "5.93", "5.94"],
+      "sources": [
+        "5.90 (5源・多数派): https://nana-press.com/kaiseki/machine/191/6665/ , https://slobase.jp/machines/myjuggler5 , https://www.nankaikoya.jp/myjuggler-five/ , https://juggler7.com/my5/kaiseki.html , https://jug123.com/my5spec/",
+        "5.89: https://1geki.jp/slot/s_myj5/4/",
+        "5.91: https://kenslo65536.com/hanbetsu/juggler-my5.html",
+        "5.93: https://jugjug.net/myjuggler5",
+        "5.94: https://grape-reverse.com/myjuggler5"
+      ],
+      "resolution": "5.90が多数派(5源)。grapeProb / grapeProbAlt ともに 5.90 を採用。"
+    },
+    {
+      "field": "設定4のREG確率・合算確率",
+      "values": ["REG 1/290.0・合算 1/135.4", "REG 1/290.1・合算 1/135.2"],
+      "sources": [
+        "290.0 / 135.4 (6源): https://slobase.jp/machines/myjuggler5 , https://www.nankaikoya.jp/myjuggler-five/ , https://jugjug.net/myjuggler5 , https://chonborista.com/slot/kitadenshi/152973/ , https://jug123.com/my5spec/ , https://juggler7.com/my5/kaiseki.html",
+        "290.1 / 135.2 (1源): https://p-town.dmm.com/specials/2538"
+      ],
+      "resolution": "290.0 / 135.4 を採用(6源対1源、かつ 1/254.0 と 1/290.0 から合算を計算すると 1/135.36 となり整合)。実用上の影響は無視できる。"
+    },
+    {
+      "field": "単独REG確率(補助指標)",
+      "values": [
+        "実戦値系(なな徹300万G / スロベース): 652.73 / 607.65 / 500.25 / 411.91 / 397.19 / 333.81",
+        "理論値系(ジャグいろは): 655.36 / 595.78 / 496.48 / 404.54 / 390.10 / 327.68",
+        "概数系(ぽこすろっと): 656 / 596 / 496 / 405 / 390 / 328"
+      ],
+      "sources": [
+        "https://nana-press.com/kaiseki/machine/191/8709/",
+        "https://slobase.jp/machines/myjuggler5",
+        "https://jug123.com/my5spec/",
+        "https://www.nankaikoya.jp/myjuggler-five/"
+      ],
+      "resolution": "未解決。ぽこすろっととジャグいろはは同系統(理論値)、なな徹/スロベースは実戦値系。差は数%程度。soloRbProb には実戦値系を採用したが、理論値系のほうが 65536/32768 といった内部分母と整合的に見える点は留意すべき。"
+    },
+    {
+      "field": "設定1の機械割",
+      "values": ["97.0", "95.7"],
+      "sources": [
+        "97.0 (上記ほぼ全情報源)",
+        "95.7 (検索結果スニペット中に1件のみ出現。出典ページを特定できず)"
+      ],
+      "resolution": "97.0 を採用。95.7 は裏取りできず、誤記または別機種・別系統の値と判断した。"
+    }
+  ],
+  "confidence": "medium"
+}

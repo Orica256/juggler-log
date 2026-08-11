@@ -1,0 +1,76 @@
+{
+  "id": "mr-juggler",
+  "name": "ミスタージャグラー",
+  "nameVariants": ["Sミスタージャグラー"],
+  "maker": "北電子",
+  "releaseYear": 2024,
+  "releaseDate": "2024-07-22",
+  "spec": "6.5号機",
+  "settings": [
+    { "setting": 1, "bbProb": 268.6, "rbProb": 374.5, "totalProb": 156.4, "grapeProb": 6.29, "payoutRate": 97.0 },
+    { "setting": 2, "bbProb": 267.5, "rbProb": 354.2, "totalProb": 152.4, "grapeProb": 6.22, "payoutRate": 98.0 },
+    { "setting": 3, "bbProb": 260.1, "rbProb": 331.0, "totalProb": 145.6, "grapeProb": 6.15, "payoutRate": 99.8 },
+    { "setting": 4, "bbProb": 249.2, "rbProb": 291.3, "totalProb": 134.3, "grapeProb": 6.09, "payoutRate": 102.7 },
+    { "setting": 5, "bbProb": 240.9, "rbProb": 257.0, "totalProb": 124.4, "grapeProb": 6.02, "payoutRate": 105.5 },
+    { "setting": 6, "bbProb": 237.4, "rbProb": 237.4, "totalProb": 118.7, "grapeProb": 5.96, "payoutRate": 107.3 }
+  ],
+  "notes": "実在する機種。北電子より2024年7月22日導入。チェリーに加えて『ピエロ』もボーナス同時当選役になっている点がシリーズ初の特徴。BIG約240枚／REG約96枚。告知は後告知のみで1/2の割合で告知音が発生。【ボーナス確率】BB/RB/合算は調査した5サイト全てで完全一致。最大の特徴はREG確率の設定差が1〜6で約1.58倍と非常に大きいこと、および設定6がBIG=REG=1/237.4（BR比1:1）になること。BR比は設定1=1.4:1 → 設定6=1:1と単調に変化するため、BR比自体が強力な判別要素になる。【ぶどう確率】メーカー非公表で解析値が2系統に割れている（conflicts参照）。採用値は juggler7 と ぽこすろっと の2ソースが完全一致した系列。ジャグラー全機種の中では設定1が1/6.29と重く、設定1〜6で段階的に設定差が付いているため、ぶどうは（分母系列の不確実性を除けば）判別に有効。【単独ボーナス（ぽこすろっと・設定1と6のみ判明）】単独BIG: 設定1=1/354 → 設定6=1/314。単独REG: 設定1=1/517 → 設定6=1/299（約1.73倍と極めて大きい設定差。判別価値が高い）。単独合算: 設定1=1/210 → 設定6=1/153。設定2〜5の数値は裏が取れず null 相当。【チェリー重複（ぽこすろっと・設定1と6のみ）】チェリー+BIG: 1/1689 → 1/1385、チェリー+REG: 1/1621 → 1/1331、合算: 1/827 → 1/679。【ピエロ重複（ぽこすろっと・設定1のみ）】ピエロ+BIG=1/2427、ピエロ+REG=1/7282、合算=1/1820。設定2〜6は未判明。【チェリー確率】juggler7は全設定共通1/37.24（設定差なし）としており、チェリーは判別に使えない。",
+  "sources": [
+    { "url": "https://chonborista.com/slot/kitadenshi/214160/", "name": "ちょんぼりすた", "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"] },
+    { "url": "https://www.nankaikoya.jp/mrjuggler/", "name": "ぽこすろっと", "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "soloBonusProb", "cherryBonusProb", "pieroBonusProb"] },
+    { "url": "https://juggler7.com/mrjuggler/settei-hanbetu.html", "name": "ジャグラー7", "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "cherryProb"] },
+    { "url": "https://www.nankaikoya.jp/juggler-budou/", "name": "ぽこすろっと（ジャグラーぶどう確率一覧）", "checkedFields": ["grapeProb"] },
+    { "url": "https://jugglersnet.com/analysis/budo-6", "name": "ジャグラーズネット（6号機ぶどう確率設定差まとめ）", "checkedFields": ["grapeProb"] },
+    { "url": "https://1geki.jp/slot/s_mrjuggler/0/", "name": "一撃", "checkedFields": ["bbProb", "rbProb", "totalProb"] },
+    { "url": "https://pachiseven.jp/machines/6968/cutout/4", "name": "パチセブン（設定差）", "checkedFields": ["bbProb", "rbProb", "totalProb"] },
+    { "url": "https://pachiseven.jp/machines/6968/cutout/1007", "name": "パチセブン（小役確率・設定6実戦値）", "checkedFields": ["grapeProb"] },
+    { "url": "https://jugjug.net/mr-juggler", "name": "ジャグジャグBeats!", "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate", "releaseDate"] },
+    { "url": "https://p-gabu.jp/guideworks/machinecontents/detail/6448", "name": "P-GABU", "checkedFields": ["bbProb", "rbProb", "payoutRate", "releaseDate"] },
+    { "url": "https://jugglertopics.jp/mr/1131/", "name": "ジャグラートピックス（実戦値）", "checkedFields": ["grapeProb", "cherryProb"] },
+    { "url": "https://www.p-world.co.jp/machine/database/10056", "name": "P-WORLD", "checkedFields": ["existence", "releaseDate"] }
+  ],
+  "conflicts": [
+    {
+      "field": "ぶどう確率（設定1〜6の系列全体）",
+      "values": [
+        "採用系列 6.29 / 6.22 / 6.15 / 6.09 / 6.02 / 5.96 （juggler7, ぽこすろっと の2ソースが完全一致）",
+        "6.13 / 6.07 / 6.01 / 5.95 / 5.88 / 5.82 （ジャグラーズネット）",
+        "実戦値 設定1=6.50 / 設定5=6.12 / 設定6=5.84 （ジャグラートピックス。某ホール実戦データと明記）",
+        "実戦値 設定6=6.24 （パチセブン）",
+        "実戦値 設定6=6.0（6604G中1100回）（一撃）"
+      ],
+      "sources": [
+        "https://juggler7.com/mrjuggler/settei-hanbetu.html",
+        "https://www.nankaikoya.jp/mrjuggler/",
+        "https://www.nankaikoya.jp/juggler-budou/",
+        "https://jugglersnet.com/analysis/budo-6",
+        "https://jugglertopics.jp/mr/1131/",
+        "https://pachiseven.jp/machines/6968/cutout/1007",
+        "https://1geki.jp/slot/s_mrjuggler/0/"
+      ],
+      "note": "重要な未解決の食い違い。採用系列とジャグラーズネット系列は全設定で一律 約0.14〜0.16 だけずれており、集計基準の違い（通常時のみ／ボーナス重複分を含むか、ボーナス中ゲーム数を分母から除くか）が原因と強く推測される。設定間の刻み幅（約0.065/段）は両系列で一致しているため、設定判別の『相対的な尤度比』は系列が違ってもほぼ変わらないが、絶対値でカウント値と突き合わせる実装にすると系統誤差が入る。実装時はどちらの基準でカウントするかを明示し、可能ならオフセットを設定可能にすること。設定6の実戦値（6.0〜6.24）は採用系列の理論値5.96に近い。"
+    },
+    {
+      "field": "出玉率（機械割）",
+      "values": [
+        "採用値 97.0 / 98.0 / 99.8 / 102.7 / 105.5 / 107.3 （ちょんぼりすた, ぽこすろっと, ジャグジャグBeats!, P-GABU の4ソース一致。メーカー公表相当）",
+        "99.50 / 100.52 / 102.37 / 105.24 / 108.09 / 109.89 （juggler7）"
+      ],
+      "sources": ["https://chonborista.com/slot/kitadenshi/214160/", "https://www.nankaikoya.jp/mrjuggler/", "https://juggler7.com/mrjuggler/settei-hanbetu.html"],
+      "note": "juggler7の値は全設定で約+2.5%高く、ピエロ・ベルまで狙うフル攻略時のシミュレート値と推測されるが、ページ上に明記が無いため断定できない。ツールには4ソース一致のメーカー公表相当値を採用した。"
+    },
+    {
+      "field": "設定2〜5の単独REG・ピエロ重複確率",
+      "values": ["設定1と設定6のみ判明。設定2〜5は情報源が見つからず（null相当）"],
+      "sources": ["https://www.nankaikoya.jp/mrjuggler/"],
+      "note": "P-GABUは『調査中』と明記。ピエロ重複は設定1のみ判明。単独REGは設定差1.73倍と判別価値が高いだけに、全設定分の裏取りが今後の課題。"
+    },
+    {
+      "field": "チェリー確率",
+      "values": ["全設定共通 1/37.24（設定差なし）（juggler7）", "実戦値 設定1=1/38.74 → 設定6=1/35.02（ジャグラートピックス）"],
+      "sources": ["https://juggler7.com/mrjuggler/settei-hanbetu.html", "https://jugglertopics.jp/mr/1131/"],
+      "note": "juggler7は設定差なしとするが、ジャグラートピックスの実戦値は設定差があるように見える。ただし後者はサンプル数の少ない実戦値。チェリー単独を判別に使うのは非推奨。"
+    }
+  ],
+  "confidence": "medium"
+}

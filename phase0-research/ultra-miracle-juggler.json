@@ -1,0 +1,64 @@
+{
+  "id": "ultra-miracle-juggler",
+  "name": "ウルトラミラクルジャグラー",
+  "nameVariants": ["Sウルトラミラクルジャグラー", "ウルミラ"],
+  "maker": "北電子",
+  "releaseYear": 2024,
+  "releaseDate": "2024-12-02",
+  "spec": "6.5号機",
+  "settings": [
+    { "setting": 1, "bbProb": 267.5, "rbProb": 425.6, "totalProb": 164.3, "grapeProb": 5.93, "payoutRate": 97.0 },
+    { "setting": 2, "bbProb": 261.1, "rbProb": 402.1, "totalProb": 158.3, "grapeProb": 5.93, "payoutRate": 98.1 },
+    { "setting": 3, "bbProb": 256.0, "rbProb": 350.5, "totalProb": 147.9, "grapeProb": 5.93, "payoutRate": 99.8 },
+    { "setting": 4, "bbProb": 242.7, "rbProb": 322.8, "totalProb": 138.6, "grapeProb": 5.93, "payoutRate": 102.1 },
+    { "setting": 5, "bbProb": 233.2, "rbProb": 297.9, "totalProb": 130.8, "grapeProb": 5.87, "payoutRate": 104.5 },
+    { "setting": 6, "bbProb": 216.3, "rbProb": 277.7, "totalProb": 121.6, "grapeProb": 5.81, "payoutRate": 108.1 }
+  ],
+  "notes": "【重要／判別設計上の注意】本機はぶどうに設定1〜4の設定差が全く無い（4段階すべて1/5.93）。設定差があるのは設定5と設定6のみで、設定1と設定6の分母差もわずか0.12と6号機ジャグラー中で最小クラス。したがって『ぶどうを主指標にする』という前提が本機だけは成立しない。ベイズ推定ではぶどうの尤度は「設定1〜4かどうか」の弱い証拠にしかならず、REG確率・単独REGを主軸に据える必要がある。【ボーナス確率】BB/RB/合算は調査した6サイト全てで完全一致。BIG偏向型（BR比 設定1で1.6:1、設定4〜6で1.3:1）でファンキージャグラー2に近いスペック。REG確率は設定1〜6で約1.53倍と設定差が大きい。【単独ボーナス（ぽこすろっと）】単独BIG: 設定1=1/334, 2=1/333, 3=1/329, 4=1/311, 5=1/304, 6=1/282。単独REG: 設定1=1/596, 2=1/546, 3=1/490, 4=1/436, 5=1/416, 6=1/380（juggler7は設定1=1/595.84・設定6=1/379.91とほぼ一致）。単独合算: 1/214, 1/207, 1/197, 1/182, 1/176, 1/162。単独REGはぶどうより設定差が大きく（1〜6で約1.57倍）、本機ではぶどうより有力な判別要素。【非重複チェリー（ぽこすろっと）】設定1〜3=1/37.2, 4=1/37.1, 5=1/36.1, 6=1/35.5。設定4以下はほぼ差が無く設定5・6のみ優遇。【出玉率】メーカー公表相当の値を採用。ぽこすろっとはチェリー狙い時（98.0〜109.4%）とフル攻略時（98.8〜110.1%）も併記している。【プレミア】プレミア告知＋ミラクル演出でBIGの約12.5%（実戦値）。",
+  "sources": [
+    { "url": "https://www.nankaikoya.jp/ultra-miracle-juggler/", "name": "ぽこすろっと", "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "soloBonusProb", "cherryProb"] },
+    { "url": "https://juggler7.com/ultramiracle/settei-hanbetu.html", "name": "ジャグラー7", "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "soloRegProb"] },
+    { "url": "https://jugglersnet.com/analysis/ultra-miracle-juggler", "name": "ジャグラーズネット", "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate"] },
+    { "url": "https://jugglersnet.com/analysis/budo-6", "name": "ジャグラーズネット（6号機ぶどう確率設定差まとめ）", "checkedFields": ["grapeProb"] },
+    { "url": "https://www.nankaikoya.jp/juggler-budou/", "name": "ぽこすろっと（ジャグラーぶどう確率一覧）", "checkedFields": ["grapeProb"] },
+    { "url": "https://1geki.jp/slot/s_ulmira_juggler/0/", "name": "一撃", "checkedFields": ["bbProb", "rbProb", "totalProb"] },
+    { "url": "https://chonborista.com/slot/kitadenshi/223647/", "name": "ちょんぼりすた", "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate", "releaseDate"] },
+    { "url": "https://www.slopachi-quest.com/article/ultramiraclejuggler/", "name": "スロパチクエスト", "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate", "releaseDate"] },
+    { "url": "https://jugjug.net/umj", "name": "ジャグジャグBeats!", "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"] },
+    { "url": "https://jugglertopics.jp/ulj/1764/", "name": "ジャグラートピックス（実戦値）", "checkedFields": ["grapeProb", "cherryProb"] }
+  ],
+  "conflicts": [
+    {
+      "field": "ぶどう確率（実戦値との乖離。理論値自体には食い違い無し）",
+      "values": [
+        "理論値 5.93 / 5.93 / 5.93 / 5.93 / 5.87 / 5.81 （ぽこすろっと, juggler7, ジャグラーズネット, ぽこすろっと一覧 の4ソースが完全一致）",
+        "実戦値 設定1=6.07 / 設定5=5.80 / 設定6=5.72 （ジャグラートピックス。某ホール実戦データと明記）",
+        "実戦値 設定6=5.55（4449G）（一撃）"
+      ],
+      "sources": [
+        "https://www.nankaikoya.jp/ultra-miracle-juggler/",
+        "https://juggler7.com/ultramiracle/settei-hanbetu.html",
+        "https://jugglersnet.com/analysis/ultra-miracle-juggler",
+        "https://jugglertopics.jp/ulj/1764/",
+        "https://1geki.jp/slot/s_ulmira_juggler/0/"
+      ],
+      "note": "理論値は4ソースが小数第2位まで完全一致しており信頼度は高い。乖離しているものは全てサンプル数の少ない実戦値であり、理論値との矛盾ではない。ツールには理論値を使用すること。"
+    },
+    {
+      "field": "チェリー確率の定義差",
+      "values": [
+        "非重複チェリー 設定1=1/37.2 → 設定6=1/35.5（ぽこすろっと）",
+        "チェリー（総計）設定1=1/35.1 → 設定6=1/33.0（juggler7）"
+      ],
+      "sources": ["https://www.nankaikoya.jp/ultra-miracle-juggler/", "https://juggler7.com/ultramiracle/settei-hanbetu.html"],
+      "note": "食い違いではなく集計基準の違い（ボーナス重複分を含むか否か）。実装時にどちらの定義でカウントするか明示すること。"
+    },
+    {
+      "field": "号機区分",
+      "values": ["6.5号機（多数派）", "6号機（スロパチクエスト等の大分類表記）"],
+      "sources": ["https://www.slopachi-quest.com/article/ultramiraclejuggler/"],
+      "note": "2024年12月導入なので6.5号機が正。判別数値には影響しない。"
+    }
+  ],
+  "confidence": "high"
+}

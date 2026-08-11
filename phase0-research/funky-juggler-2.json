@@ -1,0 +1,205 @@
+{
+  "id": "funky-juggler-2",
+  "name": "ファンキージャグラー2",
+  "maker": "北電子",
+  "releaseYear": 2021,
+  "releaseDate": "2021-10-04",
+  "spec": "6号機",
+  "settings": [
+    {
+      "setting": 1,
+      "bbProb": 266.4,
+      "rbProb": 439.8,
+      "totalProb": 165.9,
+      "grapeProb": 5.94,
+      "grapeProbAlt": 5.93,
+      "soloRbProb": 630.15,
+      "payoutRate": 97.0
+    },
+    {
+      "setting": 2,
+      "bbProb": 259.0,
+      "rbProb": 407.1,
+      "totalProb": 158.3,
+      "grapeProb": 5.92,
+      "grapeProbAlt": 5.90,
+      "soloRbProb": 585.14,
+      "payoutRate": 98.5
+    },
+    {
+      "setting": 3,
+      "bbProb": 256.0,
+      "rbProb": 366.1,
+      "totalProb": 150.7,
+      "grapeProb": 5.88,
+      "grapeProbAlt": 5.83,
+      "soloRbProb": 512.00,
+      "payoutRate": 99.8
+    },
+    {
+      "setting": 4,
+      "bbProb": 249.2,
+      "rbProb": 322.8,
+      "totalProb": 140.6,
+      "grapeProb": 5.83,
+      "grapeProbAlt": 5.81,
+      "soloRbProb": 448.88,
+      "payoutRate": 102.0
+    },
+    {
+      "setting": 5,
+      "bbProb": 240.1,
+      "rbProb": 299.3,
+      "totalProb": 133.2,
+      "grapeProb": 5.76,
+      "grapeProbAlt": 5.75,
+      "soloRbProb": 404.54,
+      "payoutRate": 104.3
+    },
+    {
+      "setting": 6,
+      "bbProb": 219.9,
+      "rbProb": 262.1,
+      "totalProb": 119.6,
+      "grapeProb": 5.67,
+      "grapeProbAlt": 5.67,
+      "soloRbProb": 352.34,
+      "payoutRate": 109.0
+    }
+  ],
+  "fieldConfidence": {
+    "bbProb": "high",
+    "rbProb": "high",
+    "totalProb": "high",
+    "grapeProb": "medium",
+    "payoutRate": "high",
+    "soloRbProb": "medium"
+  },
+  "notes": "【BB/RB/合算/機械割】6つの独立情報源(DMM P-TOWN, ぽこすろっと, ラクパチ, ジャグラーアナリティクス, スロパチクエスト, スロット解析.com, ジャグいろは)が完全一致。メーカー公表スペックとして信頼度が高い。設定1と設定6のREG確率差(1/439.8 → 1/262.1)が非常に大きく、REG回数が設定看破の主軸になる。【ぶどう確率】北電子は非公表のため第三者のシミュレート値/実戦値のみ。grapeProb には3情報源(ぽこすろっと・ジャグラーアナリティクス・ジャグいろは)が完全一致した系統を採用。grapeProbAlt にはスロパチクエストの別系統値を併記した(スキーマ外の追加フィールド)。マイジャグラーVに比べると情報源間の一致度は高く、特に設定6の 1/5.67 は4情報源で一致している。【ぶどう以外の設定判別要素】(1)単独REG確率。設定1で約1/630、設定6で約1/352と約1.79倍の設定差があり、複数の解析サイトが『信頼度は 単独REG > ぶどう確率』としている。ただし情報源間で数値がばらついている(下記conflicts参照)。(2)チェリー重複合算(スロパチクエスト): 設定1=1/510.19, 2=1/495.66, 3=1/469.06, 4=1/447.92, 5=1/422.36, 6=1/388.31。設定差は単独REGより小さい。(3)単独チェリー確率: 約1/35.5〜1/35.8で、初代ファンキージャグラーが全設定共通1/35.5だったことから本機も設定差なしの可能性が高い(ジャグラートピックス)。判別指標としては使わないほうがよい。(4)本機のぶどうはシリーズ従来機(初代ファンキー: 設定1=1/6.33 〜 設定6=1/6.09)より大幅に軽くなっており、初代の数値を流用しないよう注意。【機械割の別系統値について】payoutRate はメーカー公表値(97.0〜109.0%)。ジャグいろはは『チェリー狙い』時 設定1=97.83%/設定6=111.35%、『完全攻略』時 設定1=98.57%/設定6=112.08% という別系統のシミュレート値も掲載している。",
+  "sources": [
+    {
+      "url": "https://p-town.dmm.com/specials/2467",
+      "name": "DMM P-TOWN 設定差特集",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate", "soloRbProb"]
+    },
+    {
+      "url": "https://www.nankaikoya.jp/funkyjuggler2/",
+      "name": "ぽこすろっと",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "soloRbProb"]
+    },
+    {
+      "url": "https://akirameruna.com/funky2-jug",
+      "name": "ジャグラーアナリティクス",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "soloRbProb"]
+    },
+    {
+      "url": "https://jug123.com/funky2spec/",
+      "name": "ジャグいろは",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "soloRbProb"]
+    },
+    {
+      "url": "https://www.slopachi-quest.com/article/fanky-jagra-2-settei/",
+      "name": "スロパチクエスト",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "soloRbProb"]
+    },
+    {
+      "url": "https://jugglertopics.jp/fj2/299/",
+      "name": "ジャグラートピックス",
+      "checkedFields": ["grapeProb"]
+    },
+    {
+      "url": "https://www.rakupachi.com/machines/funky-juggler-2",
+      "name": "ラクパチ",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate"]
+    },
+    {
+      "url": "https://slotkaiseki.com/funkyjjuggler2/",
+      "name": "スロット解析.com",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate", "releaseDate", "spec"]
+    },
+    {
+      "url": "https://juggler7.com/funky2/settei-hanbetu.html",
+      "name": "juggler7(ぶどうはガリぞー出典)",
+      "checkedFields": ["grapeProb", "soloRbProb", "payoutRate"]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "ぶどう確率(全設定) — 系統の食い違い",
+      "values": [
+        "系統A(ぽこすろっと / ジャグラーアナリティクス / ジャグいろは、3源完全一致): 5.94 / 5.92 / 5.88 / 5.83 / 5.76 / 5.67",
+        "系統B(スロパチクエスト): 5.93 / 5.90 / 5.83 / 5.81 / 5.75 / 5.67",
+        "系統C(ジャグラートピックス): 5.94 / 5.92 / 5.90 / 5.83 / 5.80 / 5.70"
+      ],
+      "sources": [
+        "https://www.nankaikoya.jp/funkyjuggler2/",
+        "https://akirameruna.com/funky2-jug",
+        "https://jug123.com/funky2spec/",
+        "https://www.slopachi-quest.com/article/fanky-jagra-2-settei/",
+        "https://jugglertopics.jp/fj2/299/"
+      ],
+      "resolution": "系統Aを grapeProb に採用(3源が小数第2位まで完全一致)。系統Bを grapeProbAlt に併記。系統Cは設定3・5・6が他と食い違うため採用せず記録のみ。決着不能なため両系統で感度分析すること。"
+    },
+    {
+      "field": "設定6のぶどう確率",
+      "values": ["5.67", "5.70", "5.9(概数)"],
+      "sources": [
+        "5.67 (4源): https://www.nankaikoya.jp/funkyjuggler2/ , https://akirameruna.com/funky2-jug , https://jug123.com/funky2spec/ , https://www.slopachi-quest.com/article/fanky-jagra-2-settei/ (ラクパチも『約1/5.67』と記載)",
+        "5.70 (1源): https://jugglertopics.jp/fj2/299/",
+        "5.9 (1源・概数、ガリぞー検証として引用): https://juggler7.com/funky2/settei-hanbetu.html"
+      ],
+      "resolution": "5.67 を採用(4源一致)。juggler7 の『1/5.9』は有効数字2桁の概数表記と思われ、他源と直接比較できないため採用しない。"
+    },
+    {
+      "field": "設定3・設定5のぶどう確率",
+      "values": [
+        "設定3: 5.88 (3源) / 5.83 (1源) / 5.90 (1源)",
+        "設定5: 5.76 (3源) / 5.75 (1源) / 5.80 (1源)"
+      ],
+      "sources": [
+        "5.88・5.76: https://www.nankaikoya.jp/funkyjuggler2/ , https://akirameruna.com/funky2-jug , https://jug123.com/funky2spec/",
+        "5.83・5.75: https://www.slopachi-quest.com/article/fanky-jagra-2-settei/",
+        "5.90・5.80: https://jugglertopics.jp/fj2/299/"
+      ],
+      "resolution": "3源一致の 5.88 / 5.76 を採用。特に設定3は 5.83〜5.90 と幅があり、中間設定の判別にぶどうを使う際は不確実性が大きいことに留意。"
+    },
+    {
+      "field": "単独REG確率(補助指標)",
+      "values": [
+        "系統A(ジャグいろは): 630.15 / 585.14 / 512.00 / 448.88 / 404.54 / 352.34",
+        "系統A'(P-TOWN、概数): 630 / 585 / 512 / 448 / 404 / 352",
+        "系統B(ジャグラーアナリティクス): 636.27 / 574.88 / 512.00 / 448.88 / 409.60 / 356.17",
+        "系統C(スロパチクエスト): 636.14 / 571.90 / 510.60 / 449.18 / 408.26 / 360.15",
+        "系統D(juggler7、ガリぞー出典): 650.7 / 568.0 / 500.1 / 444.7 / 410.0 / 345.8",
+        "系統E(ぽこすろっと、概数): 630 / 585 / 512 / 449 / 405 / 352"
+      ],
+      "sources": [
+        "https://jug123.com/funky2spec/",
+        "https://p-town.dmm.com/specials/2467",
+        "https://akirameruna.com/funky2-jug",
+        "https://www.slopachi-quest.com/article/fanky-jagra-2-settei/",
+        "https://juggler7.com/funky2/settei-hanbetu.html",
+        "https://www.nankaikoya.jp/funkyjuggler2/"
+      ],
+      "resolution": "未解決。系統A(ジャグいろは)がP-TOWN・ぽこすろっとの概数と最も整合するため soloRbProb に採用したが、設定1で 630〜651、設定6で 346〜360 と最大3〜4%の幅がある。単独REGを尤度計算に使う場合はこの不確実性を織り込むこと。"
+    },
+    {
+      "field": "ジャグラートピックスのBIG/REG表の扱い",
+      "values": [
+        "同ページから 設定1: BIG 1/419.8・REG 1/632.1・合算 1/252.3 という表を取得したが、他5情報源(設定1: BIG 1/266.4・REG 1/439.8・合算 1/165.9)と全く一致しない"
+      ],
+      "sources": ["https://jugglertopics.jp/fj2/299/"],
+      "resolution": "採用せず。REG欄の値(設定1で1/632.1)が他源の『単独REG』(約1/630)とほぼ一致することから、同ページの表は総合BIG/REGではなく単独BIG/単独REGを指していると判断した。BIG/REG/合算は他5情報源の一致値を採用。"
+    },
+    {
+      "field": "導入日",
+      "values": ["2021-10-04(稼働開始)", "2021-09-20(導入予定)"],
+      "sources": [
+        "2021-10-04: 検索結果(P-WORLD / なな徹系)",
+        "2021-09-20(予定): https://slotkaiseki.com/funkyjjuggler2/"
+      ],
+      "resolution": "releaseDate は稼働開始日として 2021-10-04 を採用。9/20は導入『予定』日の表記であり、releaseYear(2021)には影響しない。"
+    }
+  ],
+  "confidence": "medium"
+}

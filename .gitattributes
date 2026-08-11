@@ -1,0 +1,3 @@
+# 環境によって改行コードが揺れないよう、テキストはLFで正規化する
+* text=auto eol=lf
+*.png binary

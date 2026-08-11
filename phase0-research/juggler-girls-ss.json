@@ -1,0 +1,147 @@
+{
+  "id": "juggler-girls-ss",
+  "name": "ジャグラーガールズSS",
+  "maker": "北電子",
+  "releaseYear": 2024,
+  "spec": "6号機",
+  "settings": [
+    {
+      "setting": 1,
+      "bbProb": 273.1,
+      "rbProb": 381.0,
+      "totalProb": 159.1,
+      "grapeProb": 5.98,
+      "payoutRate": 97.0
+    },
+    {
+      "setting": 2,
+      "bbProb": 270.8,
+      "rbProb": 350.5,
+      "totalProb": 152.8,
+      "grapeProb": 5.98,
+      "payoutRate": 97.9
+    },
+    {
+      "setting": 3,
+      "bbProb": 260.1,
+      "rbProb": 316.6,
+      "totalProb": 142.8,
+      "grapeProb": 5.98,
+      "payoutRate": 99.9
+    },
+    {
+      "setting": 4,
+      "bbProb": 250.1,
+      "rbProb": 281.3,
+      "totalProb": 132.4,
+      "grapeProb": 5.98,
+      "payoutRate": 102.1
+    },
+    {
+      "setting": 5,
+      "bbProb": 243.6,
+      "rbProb": 270.8,
+      "totalProb": 128.3,
+      "grapeProb": 5.88,
+      "payoutRate": 104.0
+    },
+    {
+      "setting": 6,
+      "bbProb": 226.0,
+      "rbProb": 252.1,
+      "totalProb": 119.2,
+      "grapeProb": 5.83,
+      "payoutRate": 107.5
+    }
+  ],
+  "notes": "【ボーナス確率・機械割】P-WORLD／パチセブン／ジャグジャグBeats／ぽこすろっと／けんのスロットシミュレーション／ジャグチェックneo／P-TOWN の7サイトで完全一致（けんのシミュレーションのみ小数第2位まで: BIG 273.07/270.81/260.06/250.14/243.63/225.99、REG 381.02/350.46/316.60/281.27/270.81/252.06、合算 159.07/152.76/142.78/132.40/128.25/119.16）。信頼度は非常に高い。\n\n【ぶどう確率】設定1〜4が共通、設定5・設定6のみ段階的に優遇される構造。ただし設定2〜4を『設定1と同値(1/5.98)』とするサイト（P-TOWN、ジャグチェックneo）と、『1/5.97・1/5.96・1/5.95』と微差を付けるサイト（ぽこすろっと）で食い違う。さらにけんのスロットシミュレーションは全体に約0.5%高い系列値（1〜4=1/6.01027, 5=1/5.92014, 6=1/5.88982）を採用しており、ぶどうの定義（ボーナス重複ぶどうの扱い、ボーナス中を含むか等）が異なる可能性が高い。conflicts参照。settingsには多数派の 5.98 / 5.88 / 5.83 系列を収録した。\n\n【単独ボーナス確率（設定判別要素）】ぽこすろっと:\n- 単独BIG: 設定1=1/390, 2=1/383, 3=1/372, 4=1/352, 5=1/340, 6=1/314\n- 単独REG: 設定1=1/524, 2=1/485, 3=1/440, 4=1/399, 5=1/385, 6=1/359\n- 単独合算: 設定1=1/224, 2=1/214, 3=1/202, 4=1/187, 5=1/181, 6=1/167\nけんのスロットシミュレーション（単独REG）: 設定1=1/520.13, 2=1/481.88, 3=1/436.91, 4=1/397.19, 5=1/383.25, 6=1/358.12（ぽこすろっとと1%以内で整合）。\n\n【チェリー重複確率】ぽこすろっと:\n- チェリー+BIG: 設定1=1/924, 2=1/924, 3=1/861, 4=1/861, 5=1/861, 6=1/808\n- チェリー+REG: 設定1=1/1398, 2=1/1261, 3=1/1128, 4=1/952, 5=1/912, 6=1/847\n- チェリー+ボーナス合算: 設定1=1/556, 2=1/533, 3=1/488, 4=1/452, 5=1/443, 6=1/414\nけんのスロットシミュレーション（REG重複）: 設定1=1/1424.70, 2=1/1285.02, 3=1/1149.75, 4=1/963.77, 5=1/923.04, 6=1/851.12（ぽこすろっとのチェリー+REGと概ね整合、誤差2〜3%）。\n\n【機種特性】アイム系・マイジャグ系に比べBIG偏向型（BIG約240枚、REG約96枚）。REG確率の設定差（設定1→6で約1.51倍）がBIG差（約1.21倍）より大きく、REGが第一判別要素。ぶどうの設定差は小さく（設定1と6で約2.6%）、ぶどう単独での判別力はゴーゴージャグラー系同様に弱いとされる点に注意。\n\n【実戦値（参考・理論値ではない）】\n- パチセブン: 設定6実戦値 ぶどう1/5.84・チェリー1/32.05（2,500Gサンプル）\n- ジャグラートピックス: 設定1 ぶどう1/6.2・チェリー1/41.1、設定5 ぶどう1/5.9・チェリー1/34.6、設定6 ぶどう1/5.8・チェリー1/31.3（某ホール実戦データ、設定2〜4は記載なし）\n\n【備考】機械割107.5%（設定6）は公表値。ジャグチェックneoは打ち方別の機械割も併記しており、チェリー狙い時 108.72%、チェリー狙い+ぶどう抜き時 108.94%（設定6）としている。",
+  "sources": [
+    {
+      "url": "https://www.p-world.co.jp/machine/database/10009",
+      "name": "P-WORLD 機種データベース",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"]
+    },
+    {
+      "url": "https://pachiseven.jp/machines/6903/cutout/4",
+      "name": "パチセブン",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb（設定6実戦値）"]
+    },
+    {
+      "url": "https://jugjug.net/jugglergirls_ss",
+      "name": "ジャグジャグBeats!",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"]
+    },
+    {
+      "url": "https://www.nankaikoya.jp/jugglergirls-ss/",
+      "name": "ぽこすろっと",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "単独ボーナス", "チェリー重複"]
+    },
+    {
+      "url": "https://kenslo65536.com/kaiseki/juggler-s-girls.html",
+      "name": "けんのスロットシミュレーション",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "単独REG", "REG重複"]
+    },
+    {
+      "url": "https://jugcheckneo.link/juggler-girls-ss/",
+      "name": "ジャグチェックneo",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate"]
+    },
+    {
+      "url": "https://p-town.dmm.com/machines/4540",
+      "name": "P-TOWN（DMM）",
+      "checkedFields": ["grapeProb", "payoutRate"]
+    },
+    {
+      "url": "https://jugglertopics.jp/jgirl/822/",
+      "name": "ジャグラートピックス（実戦値）",
+      "checkedFields": ["grapeProb（実戦値）", "チェリー確率（実戦値）"]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "設定2〜4のぶどう確率",
+      "values": [
+        "5.98 / 5.98 / 5.98（設定1と同値）",
+        "5.97 / 5.96 / 5.95（段階的に微差あり）",
+        "6.01027（設定1〜4共通・別系列の値）"
+      ],
+      "sources": [
+        "https://p-town.dmm.com/machines/4540",
+        "https://jugcheckneo.link/juggler-girls-ss/",
+        "https://www.nankaikoya.jp/jugglergirls-ss/",
+        "https://kenslo65536.com/kaiseki/juggler-s-girls.html"
+      ]
+    },
+    {
+      "field": "設定1のぶどう確率",
+      "values": ["5.98", "6.01027"],
+      "sources": [
+        "https://www.nankaikoya.jp/jugglergirls-ss/",
+        "https://jugcheckneo.link/juggler-girls-ss/",
+        "https://p-town.dmm.com/machines/4540",
+        "https://kenslo65536.com/kaiseki/juggler-s-girls.html"
+      ]
+    },
+    {
+      "field": "設定5のぶどう確率",
+      "values": ["5.88", "5.92014"],
+      "sources": [
+        "https://www.nankaikoya.jp/jugglergirls-ss/",
+        "https://jugcheckneo.link/juggler-girls-ss/",
+        "https://p-town.dmm.com/machines/4540",
+        "https://kenslo65536.com/kaiseki/juggler-s-girls.html"
+      ]
+    },
+    {
+      "field": "設定6のぶどう確率",
+      "values": ["5.83", "5.88982"],
+      "sources": [
+        "https://www.nankaikoya.jp/jugglergirls-ss/",
+        "https://jugcheckneo.link/juggler-girls-ss/",
+        "https://p-town.dmm.com/machines/4540",
+        "https://kenslo65536.com/kaiseki/juggler-s-girls.html"
+      ]
+    }
+  ],
+  "confidence": "medium"
+}

@@ -1,0 +1,177 @@
+{
+  "id": "neo-im-juggler-ex",
+  "name": "ネオアイムジャグラーEX",
+  "maker": "北電子",
+  "releaseYear": 2025,
+  "spec": "6号機",
+  "settings": [
+    {
+      "setting": 1,
+      "bbProb": 273.1,
+      "rbProb": 439.8,
+      "totalProb": 168.5,
+      "grapeProb": 6.02,
+      "payoutRate": 97.0
+    },
+    {
+      "setting": 2,
+      "bbProb": 269.7,
+      "rbProb": 399.6,
+      "totalProb": 161.0,
+      "grapeProb": 6.02,
+      "payoutRate": 98.0
+    },
+    {
+      "setting": 3,
+      "bbProb": 269.7,
+      "rbProb": 331.0,
+      "totalProb": 148.6,
+      "grapeProb": 6.02,
+      "payoutRate": 99.5
+    },
+    {
+      "setting": 4,
+      "bbProb": 259.0,
+      "rbProb": 315.1,
+      "totalProb": 142.2,
+      "grapeProb": 6.02,
+      "payoutRate": 101.1
+    },
+    {
+      "setting": 5,
+      "bbProb": 259.0,
+      "rbProb": 255.0,
+      "totalProb": 128.5,
+      "grapeProb": 6.02,
+      "payoutRate": 103.3
+    },
+    {
+      "setting": 6,
+      "bbProb": 255.0,
+      "rbProb": 255.0,
+      "totalProb": 127.5,
+      "grapeProb": 5.78,
+      "payoutRate": 105.5
+    }
+  ],
+  "notes": "【ボーナス確率・機械割】P-WORLD／なな徹／パチセブン／ジャグジャグBeats／アミュタメ／ジャンクステーション／けんのスロットシミュレーションの7サイトで完全一致。信頼度は非常に高い。数値は先代『アイムジャグラーEX(6号機)』と同一のボーナススペック。\n\n【ぶどう確率】設定1〜5が共通・設定6のみ優遇という構造は全情報源が一致。ただし設定6の具体値は 1/5.78（多数派）と 1/5.84777（けんのスロットシミュレーション）で食い違う（conflicts参照）。またp-town/アミュタメ等は『アイムジャグラーEXの値からの予想・調査中』と明記しており、ネオ独自の解析確定値としての裏取りは弱い。ベイズ判別で使う際は設定6のぶどうに幅を持たせるか、事前分布を広めに取ることを推奨。\n\n【単独REG確率（設定判別の主要素・BIG/REGとは別要素）】情報源によって3系統の値がある。\n- note.com(パチプロツール)／p-town系: 設定1=1/630.2, 2=1/574.9, 3=1/474.9, 4=1/448.9, 5=1/364.1, 6=1/364.1\n- juggler7: 設定1=1/633.4, 2=1/568.7, 3=1/471.4, 4=1/446.3, 5=1/361.7, 6=1/361.7\n- けんのスロットシミュレーション: 設定1=1/636.27, 2=1/569.88, 3=1/471.48, 4=1/445.82, 5=1/362.08, 6=1/362.08\n誤差1%以内で概ね整合。設定1→6で約1.75倍の差があり、ぶどうと並ぶ主要判別要素。\n\n【チェリー重複REG確率】\n- p-town(specials/4486): 設定1=1/1456.36, 2=1/1310.72, 3=1/1092.27, 4=1/1057.03, 5=1/851.12, 6=1/851.12\n- けんのスロットシミュレーション(REG重複合算): 設定1=1/560.14, 2=1/546.13, 3=1/504.12, 4=1/478.36, 5=1/431.16, 6=1/431.16\n定義（角チェリー限定か全チェリーか、BIG重複含むか）が異なると思われ、直接比較不可。使用時は定義の統一が必要。\n\n【BR比率】設定1〜4はBIG優勢（約1.6:1〜1.2:1）、設定5・6はBIG:REG=1:1に近づく。設定5と設定6はREG確率が同値(1/255.0)でBIG確率のみ差（1/259.0 vs 1/255.0）のため、5と6の分離はぶどうが事実上唯一の手掛かり。\n\n【全設定共通の小役（設定差なし）】リプレイ 1/7.298、チェリー 1/35.62、ベル 1/1092.27、ピエロ 1/1092.27（複数サイト記載。アイムジャグラーEXと共通値）。\n\n【実戦値（参考・理論値ではない）】\n- なな徹: 設定6実戦値 ぶどう1/5.83（515回/3000G）、チェリー1/37.5\n- ジャグラートピックス: 設定1 ぶどう1/6.11・チェリー1/30.1、設定6 ぶどう1/5.79・チェリー1/28.31\n- 一撃: 『アイムジャグラーEX(6号機)のシミュレーション600万G実戦値』として 設定1=1/6.06, 2=1/6.04, 3=1/6.04, 4=1/6.04, 5=1/6.02, 6=1/5.80（ネオ実機の値ではない点に注意）",
+  "sources": [
+    {
+      "url": "https://www.p-world.co.jp/machine/database/10269",
+      "name": "P-WORLD 機種データベース",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"]
+    },
+    {
+      "url": "https://nana-press.com/kaiseki/machine/978/",
+      "name": "なな徹",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"]
+    },
+    {
+      "url": "https://pachiseven.jp/machines/7179",
+      "name": "パチセブン",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"]
+    },
+    {
+      "url": "https://jugjug.net/neo-im-juggler-ex",
+      "name": "ジャグジャグBeats!",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"]
+    },
+    {
+      "url": "https://kenslo65536.com/kaiseki/juggler-neo-im-ex.html",
+      "name": "けんのスロットシミュレーション",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "payoutRate", "単独REG", "REG重複"]
+    },
+    {
+      "url": "https://note.com/pachiprotool/n/n7af9b37a7e15",
+      "name": "note / 全ての人生に唾を吐け（パチプロツール）",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "grapeProb", "単独REG"]
+    },
+    {
+      "url": "https://juggler7.com/neo-aimex/settei-hanbetu.html",
+      "name": "juggler7",
+      "checkedFields": ["totalProb", "grapeProb", "単独REG", "payoutRate"]
+    },
+    {
+      "url": "https://p-town.dmm.com/specials/4486",
+      "name": "P-TOWN（DMM）設定差まとめ",
+      "checkedFields": ["grapeProb", "単独REG", "チェリー重複REG"]
+    },
+    {
+      "url": "https://www.amuse-p.com/blog/neojuggler/",
+      "name": "アミュタメ",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate", "grapeProb"]
+    },
+    {
+      "url": "https://junk-station.jp/?p=292",
+      "name": "ジャンクステーション",
+      "checkedFields": ["bbProb", "rbProb", "totalProb", "payoutRate"]
+    },
+    {
+      "url": "https://1geki.jp/slot/s_nijex/4/",
+      "name": "一撃（実戦値）",
+      "checkedFields": ["grapeProb（実戦値）"]
+    },
+    {
+      "url": "https://jugglertopics.jp/neojex/2865/",
+      "name": "ジャグラートピックス（実戦値）",
+      "checkedFields": ["grapeProb（実戦値）", "チェリー確率（実戦値）"]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "設定6のぶどう確率",
+      "values": ["5.78", "5.84777"],
+      "sources": [
+        "https://p-town.dmm.com/specials/4486",
+        "https://juggler7.com/neo-aimex/settei-hanbetu.html",
+        "https://note.com/pachiprotool/n/n7af9b37a7e15",
+        "https://jugjug.net/neo-im-juggler-ex",
+        "https://kenslo65536.com/kaiseki/juggler-neo-im-ex.html"
+      ]
+    },
+    {
+      "field": "設定1〜5のぶどう確率",
+      "values": ["6.02", "6.02408"],
+      "sources": [
+        "https://p-town.dmm.com/specials/4486",
+        "https://kenslo65536.com/kaiseki/juggler-neo-im-ex.html"
+      ]
+    },
+    {
+      "field": "機械割（出玉率）全設定",
+      "values": [
+        "97.0 / 98.0 / 99.5 / 101.1 / 103.3 / 105.5（メーカー公表値。P-WORLD・なな徹・パチセブン・ジャグジャグ・アミュタメ・ジャンクステーション・けんのシミュレーションが一致）",
+        "97.63 / 98.50 / 100.62 / 102.80 / 104.93 / 107.39（juggler7。他機種の値の混入または独自シミュレーション値の可能性が高く、採用せず）"
+      ],
+      "sources": [
+        "https://www.p-world.co.jp/machine/database/10269",
+        "https://juggler7.com/neo-aimex/settei-hanbetu.html"
+      ]
+    },
+    {
+      "field": "単独REG確率（settingsには未収録・notes参照）",
+      "values": [
+        "630.2 / 574.9 / 474.9 / 448.9 / 364.1 / 364.1",
+        "633.4 / 568.7 / 471.4 / 446.3 / 361.7 / 361.7",
+        "636.27 / 569.88 / 471.48 / 445.82 / 362.08 / 362.08"
+      ],
+      "sources": [
+        "https://note.com/pachiprotool/n/n7af9b37a7e15",
+        "https://juggler7.com/neo-aimex/settei-hanbetu.html",
+        "https://kenslo65536.com/kaiseki/juggler-neo-im-ex.html"
+      ]
+    },
+    {
+      "field": "チェリー重複REG確率（定義不一致のため直接比較不可）",
+      "values": [
+        "1456.36 / 1310.72 / 1092.27 / 1057.03 / 851.12 / 851.12",
+        "560.14 / 546.13 / 504.12 / 478.36 / 431.16 / 431.16"
+      ],
+      "sources": [
+        "https://p-town.dmm.com/specials/4486",
+        "https://kenslo65536.com/kaiseki/juggler-neo-im-ex.html"
+      ]
+    }
+  ],
+  "confidence": "medium"
+}
