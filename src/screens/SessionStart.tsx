@@ -1,6 +1,6 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { CounterFields } from '../components/CounterFields'
-import { Button, Card, Field, ScreenHeader, Select, TextInput } from '../components/ui'
+import { Button, Card, DateInput, Field, ScreenHeader, Select, TextInput } from '../components/ui'
 import { MACHINES } from '../data/machines'
 import { deleteSession, getSession, isBlankSession, updateSession } from '../db/sessions'
 import { updateSettings } from '../db'
@@ -58,12 +58,7 @@ export function SessionStart({
       <Card>
         <div className="space-y-3">
           <Field label="日付">
-            <input
-              type="date"
-              value={session.date}
-              onChange={(e) => updateSession(id, { date: e.target.value })}
-              className="mt-1 min-h-12 w-full rounded-lg border border-[var(--color-line)] bg-[var(--color-bg)] px-3 text-base text-[var(--color-text)] outline-none"
-            />
+            <DateInput value={session.date} onChange={(v) => updateSession(id, { date: v })} />
           </Field>
 
           <Field label="店名">

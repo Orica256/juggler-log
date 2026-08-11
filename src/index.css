@@ -39,6 +39,18 @@ body {
 }
 
 /*
+ * iOS Safari の日付入力は、既定の外観のままだと内容の幅が優先されて
+ * 親要素の枠を右側にはみ出す。外観をリセットし、幅を親に従わせる。
+ */
+input[type='date'] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/*
  * iPhone のノッチ / Dynamic Island / ホームバー回避。
  * viewport-fit=cover と apple-mobile-web-app-status-bar-style=black-translucent を
  * 指定しているため、画面はステータスバーの下まで描画される。

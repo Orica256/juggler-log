@@ -158,6 +158,27 @@ export function TextInput({
   )
 }
 
+/**
+ * 日付入力。
+ * iOS Safari では外観のリセットが要る(index.css を参照)。
+ */
+export function DateInput({
+  value,
+  onChange,
+}: {
+  value: string
+  onChange: (value: string) => void
+}) {
+  return (
+    <input
+      type="date"
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+      className={INPUT_CLASS}
+    />
+  )
+}
+
 /** 複数行の入力。IMEの扱いは TextInput と同じ */
 export function TextArea({
   value,
