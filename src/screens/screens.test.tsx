@@ -11,6 +11,7 @@ import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/re
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { db } from '../db'
 import { finishSession, getSession, startSession, updateSession } from '../db/sessions'
+import { Help } from './Help'
 import { History } from './History'
 import { Home } from './Home'
 import { SessionDetail } from './SessionDetail'
@@ -264,6 +265,26 @@ describe('履歴と詳細', () => {
 
     expect(await screen.findByText('+10,000円')).toBeDefined()
     expect(screen.getByText(/投資 20,000円 \/ 回収 30,000円/)).toBeDefined()
+  })
+})
+
+describe('使い方', () => {
+  it('初心者が迷いやすい項目の説明を載せている', async () => {
+    render(<Help navigate={navigate} />)
+
+    expect(await screen.findByText('ジャグラーの用語')).toBeDefined()
+    expect(screen.getByText('ぶどう・単独REGの数え方(重要)')).toBeDefined()
+    expect(screen.getByText('数字の読み方')).toBeDefined()
+  })
+
+  it('着席時カウンターは前任者ぶんを含めて入れると明記している', async () => {
+    render(<Help navigate={navigate} />)
+    expect(await screen.findByText(/前の人が打ったぶんを含んだ、今表示されている数字/)).toBeDefined()
+  })
+
+  it('分からないREGを推測で分類しないよう警告している', async () => {
+    render(<Help navigate={navigate} />)
+    expect(await screen.findByText(/必ず「不明REG」を押してください/)).toBeDefined()
   })
 })
 

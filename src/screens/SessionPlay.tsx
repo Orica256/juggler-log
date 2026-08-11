@@ -108,13 +108,22 @@ export function SessionPlay({
         title={machine?.name ?? '実戦中'}
         onBack={() => navigate('/', true)}
         right={
-          <button
-            type="button"
-            onClick={() => navigate(`/start/${id}`)}
-            className="text-sm text-[var(--color-muted)]"
-          >
-            開始情報
-          </button>
+          <div className="flex shrink-0 gap-3">
+            <button
+              type="button"
+              onClick={() => navigate('/help')}
+              className="text-sm text-[var(--color-muted)]"
+            >
+              使い方
+            </button>
+            <button
+              type="button"
+              onClick={() => navigate(`/start/${id}`)}
+              className="text-sm text-[var(--color-muted)]"
+            >
+              開始情報
+            </button>
+          </div>
         }
       />
 

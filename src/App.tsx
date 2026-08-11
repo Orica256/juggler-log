@@ -1,4 +1,5 @@
 import { useHashRoute } from './hooks/useHashRoute'
+import { Help } from './screens/Help'
 import { History } from './screens/History'
 import { Home } from './screens/Home'
 import { SessionDetail } from './screens/SessionDetail'
@@ -41,6 +42,8 @@ export default function App() {
         return id ? <SessionDetail id={id} navigate={navigate} /> : <History navigate={navigate} />
       case 'history':
         return <History navigate={navigate} />
+      case 'help':
+        return <Help navigate={navigate} />
       case 'settings':
         return <Settings navigate={navigate} />
       default:

@@ -25,13 +25,22 @@ export function Home({ navigate }: { navigate: (to: string) => void }) {
     <div className="pb-8">
       <header className="safe-top mb-4 flex items-baseline justify-between pb-3">
         <h1 className="text-lg font-bold">ジャグラー実戦記録</h1>
-        <button
-          type="button"
-          onClick={() => navigate('/settings')}
-          className="text-sm text-[var(--color-muted)]"
-        >
-          設定
-        </button>
+        <div className="flex shrink-0 gap-3">
+          <button
+            type="button"
+            onClick={() => navigate('/help')}
+            className="text-sm text-[var(--color-muted)]"
+          >
+            使い方
+          </button>
+          <button
+            type="button"
+            onClick={() => navigate('/settings')}
+            className="text-sm text-[var(--color-muted)]"
+          >
+            設定
+          </button>
+        </div>
       </header>
 
       <Card>
