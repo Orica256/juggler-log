@@ -45,38 +45,43 @@ body {
 input[type='date'] {
   -webkit-appearance: none;
   appearance: none;
-  display: block;
+  /*
+   * 日付の各桁を並べる内部要素は、放っておくと折り返して入力欄の高さを押し広げる。
+   * 入力欄自体を横並びの箱にして1行に固定し、高さも他の入力欄と揃える。
+   */
+  display: flex;
+  align-items: center;
   width: 100%;
   min-width: 0;
   max-width: 100%;
+  height: 3rem;
   box-sizing: border-box;
   text-align: left;
 }
 
-/*
- * 外観のリセットだけでは足りない。iOSは日付の値と各桁を描く内部要素に
- * 独自の余白と最小幅を持っており、これが枠を押し広げる。
- */
 input[type='date']::-webkit-date-and-time-value {
   text-align: left;
   margin: 0;
   min-width: 0;
-  max-width: 100%;
 }
 
 input[type='date']::-webkit-datetime-edit {
-  padding: 0;
+  display: flex;
+  flex: 1 1 auto;
   min-width: 0;
-  max-width: 100%;
+  padding: 0;
+  white-space: nowrap;
   overflow: hidden;
 }
 
 input[type='date']::-webkit-datetime-edit-fields-wrapper {
+  display: flex;
   padding: 0;
 }
 
-/* カレンダーのアイコンは右端に寄せ、値の幅を押し出さないようにする */
+/* カレンダーのアイコンは右端に固定し、日付の幅を押し出さないようにする */
 input[type='date']::-webkit-calendar-picker-indicator {
+  flex: 0 0 auto;
   margin: 0 0 0 auto;
   padding: 0;
 }
