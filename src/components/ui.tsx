@@ -4,7 +4,7 @@
  * ホールで片手・親指操作することを前提に、タップ領域は最低56pxを確保する。
  * 入力欄は数値キーボードが出るように inputMode を指定する。
  */
-import type { ReactNode } from 'react'
+import { useRef, useState, type ReactNode } from 'react'
 
 export function Card({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
@@ -26,7 +26,7 @@ export function ScreenHeader({
   right?: ReactNode
 }) {
   return (
-    <header className="sticky top-0 z-10 -mx-4 mb-4 flex items-center gap-2 border-b border-[var(--color-line)] bg-[var(--color-bg)]/95 px-4 py-3 backdrop-blur">
+    <header className="safe-top sticky top-0 z-10 -mx-4 mb-4 flex items-center gap-2 border-b border-[var(--color-line)] bg-[var(--color-bg)]/95 px-4 pb-3 backdrop-blur">
       {onBack && (
         <button
           type="button"
@@ -100,6 +100,26 @@ export function Field({
 const INPUT_CLASS =
   'mt-1 min-h-12 w-full rounded-lg border border-[var(--color-line)] bg-[var(--color-bg)] px-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-muted)]'
 
+/**
+ * 入力中だけ画面内の値を正とするための状態。
+ *
+ * このアプリは入力のたびにIndexedDBへ書き込み、その結果が非同期で戻ってくる。
+ * 戻り値をそのまま value に流すと、日本語入力の変換確定と再描画が重なったときに
+ * 確定済みの文字がもう一度挿入され、「あ」が「ああ」になる。
+ * そこで編集中は draft を表示し、フォーカスが外れたら外部の値に戻す。
+ */
+function useDraft(external: string) {
+  const [draft, setDraft] = useState<string | null>(null)
+  const composing = useRef(false)
+  return {
+    display: draft ?? external,
+    composing,
+    setDraft,
+    /** フォーカスが外れたら外部の値に追従を戻す */
+    release: () => setDraft(null),
+  }
+}
+
 export function TextInput({
   value,
   onChange,
@@ -109,13 +129,70 @@ export function TextInput({
   onChange: (value: string) => void
   placeholder?: string
 }) {
+  const { display, composing, setDraft, release } = useDraft(value)
+
   return (
     <input
       type="text"
-      value={value}
+      value={display}
       placeholder={placeholder}
-      onChange={(e) => onChange(e.target.value)}
+      onCompositionStart={() => {
+        composing.current = true
+      }}
+      onCompositionEnd={(e) => {
+        // 変換が確定してから初めて保存する
+        composing.current = false
+        const next = e.currentTarget.value
+        setDraft(next)
+        onChange(next)
+      }}
+      onChange={(e) => {
+        const next = e.target.value
+        setDraft(next)
+        // 変換中の未確定文字は保存しない
+        if (!composing.current) onChange(next)
+      }}
+      onBlur={release}
       className={INPUT_CLASS}
+    />
+  )
+}
+
+/** 複数行の入力。IMEの扱いは TextInput と同じ */
+export function TextArea({
+  value,
+  onChange,
+  placeholder,
+  rows = 3,
+}: {
+  value: string
+  onChange: (value: string) => void
+  placeholder?: string
+  rows?: number
+}) {
+  const { display, composing, setDraft, release } = useDraft(value)
+
+  return (
+    <textarea
+      value={display}
+      rows={rows}
+      placeholder={placeholder}
+      onCompositionStart={() => {
+        composing.current = true
+      }}
+      onCompositionEnd={(e) => {
+        composing.current = false
+        const next = e.currentTarget.value
+        setDraft(next)
+        onChange(next)
+      }}
+      onChange={(e) => {
+        const next = e.target.value
+        setDraft(next)
+        if (!composing.current) onChange(next)
+      }}
+      onBlur={release}
+      className="mt-1 w-full rounded-lg border border-[var(--color-line)] bg-[var(--color-bg)] p-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-muted)]"
     />
   )
 }
@@ -140,8 +217,17 @@ export function NumberInput({
   nullable?: boolean
   suffix?: string
 }) {
+  // 数値でもDBからの戻りは非同期なので、編集中は画面内の入力を正とする
+  const { display, setDraft, release } = useDraft(value === null ? '' : String(value))
+
   const handle = (raw: string) => {
-    const cleaned = raw.replace(/[^\d-]/g, '')
+    setDraft(raw)
+    // iPhoneの日本語キーボードからは全角数字が入る。半角に直してから解釈しないと
+    // 数字がまるごと捨てられ、意図しない値が保存される
+    const normalized = raw
+      .replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
+      .replace(/[−ー―‐]/g, '-')
+    const cleaned = normalized.replace(/[^\d-]/g, '')
     if (cleaned === '' || cleaned === '-') {
       onChange(nullable ? null : 0)
       return
@@ -156,10 +242,11 @@ export function NumberInput({
       <input
         type="text"
         inputMode={allowNegative ? 'text' : 'numeric'}
-        value={value === null ? '' : String(value)}
+        value={display}
         placeholder={placeholder}
         onChange={(e) => handle(e.target.value)}
         onFocus={(e) => e.target.select()}
+        onBlur={release}
         className={`${INPUT_CLASS} ${suffix ? 'pr-10' : ''} text-right tabular-nums`}
       />
       {suffix && (

@@ -1,6 +1,15 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { CounterFields } from '../components/CounterFields'
-import { Button, Card, Field, NumberInput, ScreenHeader, Select, SignedValue } from '../components/ui'
+import {
+  Button,
+  Card,
+  Field,
+  NumberInput,
+  ScreenHeader,
+  Select,
+  SignedValue,
+  TextArea,
+} from '../components/ui'
 import { findMachine } from '../data/machines'
 import { finishSession, getSession, updateSession } from '../db/sessions'
 import { counterDiff, medalsToYen, profit } from '../lib/calc'
@@ -114,12 +123,11 @@ export function SessionEnd({
 
       <Card className="mt-4">
         <Field label="メモ(任意)">
-          <textarea
+          <TextArea
             value={session.memo}
-            onChange={(e) => updateSession(id, { memo: e.target.value })}
+            onChange={(v) => updateSession(id, { memo: v })}
             rows={2}
             placeholder={machine ? `${machine.name} の所感など` : '所感など'}
-            className="mt-1 w-full rounded-lg border border-[var(--color-line)] bg-[var(--color-bg)] p-3 text-base text-[var(--color-text)] outline-none"
           />
         </Field>
       </Card>

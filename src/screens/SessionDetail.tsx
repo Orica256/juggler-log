@@ -9,6 +9,7 @@ import {
   ScreenHeader,
   Select,
   SignedValue,
+  TextArea,
   TextInput,
 } from '../components/ui'
 import { MACHINES, findMachine } from '../data/machines'
@@ -205,12 +206,11 @@ export function SessionDetail({
 
       <Card className="mt-4">
         <Field label="メモ">
-          <textarea
+          <TextArea
             value={session.memo}
-            onChange={(e) => updateSession(id, { memo: e.target.value })}
+            onChange={(v) => updateSession(id, { memo: v })}
             rows={3}
             placeholder="所感など"
-            className="mt-1 w-full rounded-lg border border-[var(--color-line)] bg-[var(--color-bg)] p-3 text-base text-[var(--color-text)] outline-none"
           />
         </Field>
       </Card>

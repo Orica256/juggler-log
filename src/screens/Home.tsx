@@ -23,7 +23,7 @@ export function Home({ navigate }: { navigate: (to: string) => void }) {
 
   return (
     <div className="pb-8">
-      <header className="mb-4 flex items-baseline justify-between py-3">
+      <header className="safe-top mb-4 flex items-baseline justify-between pb-3">
         <h1 className="text-lg font-bold">ジャグラー実戦記録</h1>
         <button
           type="button"

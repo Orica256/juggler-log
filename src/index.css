@@ -38,7 +38,16 @@ body {
   touch-action: manipulation;
 }
 
-/* iPhone のノッチ / ホームバー回避 */
+/*
+ * iPhone のノッチ / Dynamic Island / ホームバー回避。
+ * viewport-fit=cover と apple-mobile-web-app-status-bar-style=black-translucent を
+ * 指定しているため、画面はステータスバーの下まで描画される。
+ * ヘッダー側で上部の余白を自前で確保しないと、時刻やバッテリー表示に重なる。
+ */
 .safe-bottom {
   padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-top {
+  padding-top: calc(0.75rem + env(safe-area-inset-top));
 }
