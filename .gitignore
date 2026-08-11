@@ -5,3 +5,6 @@ dist-ssr/
 .DS_Store
 .vscode/*
 !.vscode/extensions.json
+
+# アーティファクト(使い方ガイドの文書版)の下書き
+.artifact/
